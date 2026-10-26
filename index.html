@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wizard Telêmaco Borba | Curso de inglês presencial e online</title>
+  <meta name="description" content="Curso de inglês Wizard by Pearson para crianças a partir de 3 anos, adolescentes e adultos. Turmas de até 6 alunos, presencial em Telêmaco Borba ou online para todo o Brasil. Mensalidades a partir de R$ 263 com material incluso.">
+  <meta name="theme-color" content="#00214D">
+
+  <!-- Prévia do link no WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wizardtelemaco.github.io/">
+  <meta property="og:title" content="Wizard Telêmaco Borba | Inglês que te leva mais longe">
+  <meta property="og:description" content="Fale inglês desde a primeira aula. Turmas de até 6 alunos, a partir de 3 anos. Presencial em Telêmaco Borba ou online.">
+  <meta property="og:image" content="https://wizardtelemaco.github.io/img/capa.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <link rel="icon" href="img/selo-wizard-telemaco.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Caveat:wght@600;700&family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       IDENTIDADE VISUAL WIZARD — altere aqui para mudar o site
+       ========================================================= */
+    :root {
+      --marinho:        #00214D;  /* azul Wizard */
+      --marinho-escuro: #031836;
+      --noite:          #00122E;
+      --vermelho:       #ED0E2C;  /* vermelho da águia */
+      --vermelho-escuro:#C40A22;
+      --branco:         #FFFFFF;
+      --fundo:          #F3F5FA;
+      --texto:          #14213D;
+      --suave:          #5A6478;
+      --linha:          #DDE3EE;
+      --kids-azul:      #1DA1E0;  /* WizKids */
+      --kids-amarelo:   #FFC72C;
+      --whats:          #1FA855;
+      --whats-escuro:   #178A45;
+
+      --fonte-titulo: "Montserrat", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      --fonte-texto:  "Nunito Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      --fonte-kids:   "Baloo 2", "Montserrat", system-ui, sans-serif;
+      --fonte-script: "Caveat", "Segoe Script", cursive;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--fundo);
+      color: var(--texto);
+      font-family: var(--fonte-texto);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    [hidden] { display: none !important; }
+    h1, h2, h3 { margin: 0; font-family: var(--fonte-titulo); line-height: 1.15; letter-spacing: -.01em; text-wrap: balance; }
+    p { margin: 0; }
+    img, video { max-width: 100%; height: auto; display: block; }
+
+    .conteudo { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+    .secao { padding: 64px 0; scroll-margin-top: 64px; }
+    .rotulo { margin: 0 0 8px; font-family: var(--fonte-titulo); font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--vermelho); }
+    .secao h2 { font-size: clamp(28px, 4.5vw, 40px); font-weight: 900; color: var(--marinho); }
+    .secao .intro { margin-top: 12px; max-width: 640px; font-size: 18px; color: var(--suave); }
+
+    /* ---------- Botões ---------- */
+    .botao {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 52px; padding: 12px 24px;
+      border-radius: 999px; border: 2px solid transparent;
+      font-family: var(--fonte-titulo); font-weight: 800; font-size: 16px;
+      text-decoration: none; text-align: center; cursor: pointer;
+      transition: background-color .2s ease, transform .15s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .botao:hover { transform: translateY(-1px); }
+    .botao svg { width: 20px; height: 20px; flex: none; }
+    .botao--whats { background: var(--whats); color: var(--branco); }
+    .botao--whats:hover { background: var(--whats-escuro); }
+    .botao--vermelho { background: var(--vermelho); color: var(--branco); }
+    .botao--vermelho:hover { background: var(--vermelho-escuro); }
+    .botao--contorno { border-color: rgba(255,255,255,.75); color: var(--branco); background: transparent; }
+    .botao--contorno:hover { background: rgba(255,255,255,.1); }
+    .botao--claro { border-color: var(--marinho); color: var(--marinho); background: transparent; }
+    .botao--claro:hover { background: var(--marinho); color: var(--branco); }
+    :is(.botao, .aba, .quiz__opcao, summary):focus-visible { outline: 3px solid var(--kids-amarelo); outline-offset: 3px; }
+
+    /* ---------- Barra do topo ---------- */
+    .barra { position: sticky; top: 0; z-index: 20; background: var(--marinho-escuro); box-shadow: 0 1px 0 rgba(255,255,255,.08); }
+    .barra .conteudo { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; }
+    .barra__marca { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--branco); }
+    .barra__marca img.logo { width: 132px; height: auto; }
+    .barra__marca span { padding-left: 12px; border-left: 1px solid rgba(255,255,255,.35); font-family: var(--fonte-titulo); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; line-height: 1.3; }
+    .barra__whats { padding: 9px 16px; min-height: 0; font-size: 14px; }
+    @media (max-width: 420px) { .barra__marca span { display: none; } }
+
+    /* ---------- Topo ---------- */
+    .hero { position: relative; overflow: hidden; color: var(--branco);
+      background: radial-gradient(90% 80% at 80% 0%, #0A3A7A 0%, var(--marinho) 45%, var(--noite) 100%); }
+    .hero__aguia { position: absolute; right: -6%; bottom: -10%; width: min(720px, 90%); opacity: .6; pointer-events: none; mix-blend-mode: screen;
+      -webkit-mask-image: radial-gradient(closest-side, #000 45%, transparent 100%); mask-image: radial-gradient(closest-side, #000 45%, transparent 100%); }
+    .hero__faixa { position: absolute; pointer-events: none; border-radius: 50%; }
+    .hero__faixa--1 { width: 1100px; height: 1100px; left: -790px; top: -940px; border: 10px solid var(--vermelho); }
+    .hero__faixa--2 { width: 1100px; height: 1100px; left: -810px; top: -930px; border: 3px solid rgba(255,255,255,.8); }
+    .hero .conteudo { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; padding-block: 72px 80px; }
+    .hero__slogan { font-family: var(--fonte-script); font-size: 34px; font-weight: 700; color: var(--branco); transform: rotate(-3deg); display: inline-block; }
+    .hero__slogan::after { content: ""; display: block; height: 4px; width: 70%; margin-top: 2px; background: var(--vermelho); border-radius: 4px; transform: rotate(-1deg); }
+    .hero h1 { margin-top: 14px; font-size: clamp(38px, 6.4vw, 64px); font-weight: 900; font-style: italic; letter-spacing: -.02em; }
+    .hero h1 em { font-style: italic; color: var(--vermelho); }
+    .hero__sub { margin-top: 18px; max-width: 540px; font-size: 19px; color: rgba(255,255,255,.88); }
+    .hero__preco { margin-top: 22px; display: inline-flex; align-items: baseline; gap: 8px; flex-wrap: wrap; padding: 10px 18px; border-radius: 14px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); }
+    .hero__preco small { font-size: 14px; color: rgba(255,255,255,.8); }
+    .hero__preco b { font-family: var(--fonte-titulo); font-size: 28px; font-weight: 900; }
+    .hero__acoes { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero__garantias { list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 22px; font-weight: 700; font-size: 15px; }
+    .hero__garantias li { display: flex; align-items: center; gap: 8px; }
+    .hero__garantias li::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--vermelho); box-shadow: 0 0 0 3px rgba(237,14,44,.25); }
+
+    .consultora { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); border-radius: 28px; padding: 24px; text-align: center; backdrop-filter: blur(4px); }
+    .consultora img { width: min(260px, 70%); margin: 0 auto; border-radius: 50%; }
+    .consultora .nome { margin-top: 16px; font-family: var(--fonte-titulo); font-size: 22px; font-weight: 800; }
+    .consultora p { margin-top: 4px; font-size: 15px; color: rgba(255,255,255,.8); }
+    .consultora .botao { margin-top: 16px; width: 100%; }
+
+    /* ---------- Turmas por idade ---------- */
+    .abas { margin-top: 28px; display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
+    .abas::-webkit-scrollbar { display: none; }
+    .aba { flex: none; padding: 12px 18px; border-radius: 16px; border: 2px solid var(--linha); background: var(--branco); color: var(--marinho); font-family: var(--fonte-titulo); font-weight: 800; font-size: 15px; line-height: 1.2; text-align: left; cursor: pointer; }
+    .aba small { display: block; font-family: var(--fonte-texto); font-weight: 600; font-size: 13px; color: var(--suave); }
+    .aba[aria-selected="true"] { background: var(--marinho); border-color: var(--marinho); color: var(--branco); }
+    .aba[aria-selected="true"] small { color: rgba(255,255,255,.8); }
+
+    .painel { margin-top: 18px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: start; padding: 28px; border-radius: 28px; background: var(--branco); border: 1px solid var(--linha); }
+    .painel--kids { background: linear-gradient(150deg, #EAF7FE 0%, #FFFFFF 60%); border-color: #BFE6F8; }
+    .painel h3 { font-size: 30px; font-weight: 900; color: var(--marinho); }
+    .painel--kids h3 { font-family: var(--fonte-kids); font-weight: 800; color: var(--kids-azul); font-size: 36px; }
+    .painel__idade { margin-top: 4px; font-weight: 700; color: var(--suave); }
+    .painel__texto { margin-top: 14px; font-size: 17px; }
+    .itens { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 10px; }
+    .itens li { display: grid; grid-template-columns: 24px 1fr; gap: 10px; }
+    .itens li::before { content: "✓"; width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: var(--vermelho); color: var(--branco); font-weight: 900; font-size: 13px; margin-top: 2px; }
+    .painel--kids .itens li::before { background: var(--kids-azul); }
+    .modalidades { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { padding: 6px 12px; border-radius: 999px; font-family: var(--fonte-titulo); font-size: 13px; font-weight: 800; background: var(--fundo); color: var(--marinho); }
+    .tag--sim { background: #E4F6EC; color: #126B37; }
+    .tag--nao { background: #F1F2F5; color: var(--suave); text-decoration: line-through; }
+    .painel .botao { margin-top: 22px; }
+    .painel__lado img, .painel__lado video { border-radius: 20px; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--fundo); }
+    .niveis { margin-top: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .nivel { padding: 10px; border-radius: 14px; background: var(--fundo); text-align: center; font-family: var(--fonte-titulo); font-weight: 800; color: var(--marinho); font-size: 15px; line-height: 1.25; }
+    .nivel small { display: block; font-family: var(--fonte-texto); font-weight: 600; color: var(--suave); font-size: 12px; }
+    .nota-nivelamento { margin-top: 16px; font-size: 15px; color: var(--suave); }
+
+    /* ---------- Por que a Wizard (vídeo da consultora) ---------- */
+    .porque { background: var(--marinho); color: var(--branco); }
+    .porque .conteudo { display: grid; grid-template-columns: 380px 1fr; gap: 48px; align-items: center; }
+    .porque h2 { color: var(--branco); }
+    .porque .intro { color: rgba(255,255,255,.82); }
+    .video-vertical { position: relative; border-radius: 26px; overflow: hidden; background: var(--noite); box-shadow: 0 24px 50px rgba(0,0,0,.35); aspect-ratio: 9 / 16; }
+    .video-vertical video { width: 100%; height: 100%; object-fit: cover; }
+    .porque blockquote { margin: 24px 0 0; padding-left: 18px; border-left: 4px solid var(--vermelho); font-family: var(--fonte-titulo); font-size: 22px; font-weight: 700; font-style: italic; line-height: 1.35; }
+    .porque .botao { margin-top: 26px; }
+
+    /* ---------- Metodologia ---------- */
+    .fale { margin-top: 32px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .fale__item { padding: 22px; border-radius: 22px; background: var(--branco); border: 1px solid var(--linha); }
+    .fale__letra { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 50%; background: var(--marinho); color: var(--branco); font-family: var(--fonte-titulo); font-weight: 900; font-style: italic; font-size: 26px; }
+    .fale__item:nth-child(2) .fale__letra { background: var(--vermelho); }
+    .fale__item:nth-child(4) .fale__letra { background: var(--vermelho); }
+    .fale__item h3 { margin-top: 14px; font-size: 20px; color: var(--marinho); }
+    .fale__item p { margin-top: 6px; color: var(--suave); font-size: 15px; }
+    .metodo { margin-top: 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .metodo__item { padding: 22px; border-radius: 22px; background: var(--marinho); color: var(--branco); }
+    .metodo__item b { display: block; font-family: var(--fonte-titulo); font-size: 34px; font-weight: 900; font-style: italic; color: var(--branco); line-height: 1.1; }
+    .metodo__item b span { color: var(--vermelho); }
+    .metodo__item h3 { margin-top: 8px; font-size: 18px; }
+    .metodo__item p { margin-top: 6px; color: rgba(255,255,255,.8); font-size: 15px; }
+
+    /* ---------- WizPen ---------- */
+    .wizpen { background: linear-gradient(180deg, var(--fundo), #E6EBF4); }
+    .wizpen .conteudo { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .wizpen__fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .wizpen__fotos img { border-radius: 22px; aspect-ratio: 3 / 4; object-fit: cover; width: 100%; }
+    .wizpen__fotos .video-vertical { grid-column: 1 / -1; aspect-ratio: 16 / 11; }
+    .selo-exclusivo { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 6px 14px; border-radius: 999px; background: var(--vermelho); color: var(--branco); font-family: var(--fonte-titulo); font-weight: 800; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
+
+    /* ---------- Materiais ---------- */
+    .materiais .conteudo { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
+    .video-horizontal { border-radius: 24px; overflow: hidden; background: var(--noite); aspect-ratio: 16 / 9; box-shadow: 0 18px 40px rgba(0,33,77,.18); }
+    .video-horizontal video { width: 100%; height: 100%; object-fit: cover; }
+    .materiais__fotos { margin-top: 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .materiais__fotos figure { margin: 0; }
+    .materiais__fotos img { border-radius: 18px; aspect-ratio: 1 / 1; object-fit: cover; width: 100%; }
+    .materiais__fotos figcaption { margin-top: 6px; font-size: 14px; font-weight: 700; color: var(--suave); }
+
+    /* ---------- Crianças ---------- */
+    .criancas { background: linear-gradient(180deg, #E9F7FE 0%, #FFF8E3 100%); }
+    .criancas h2 { font-family: var(--fonte-kids); font-weight: 800; color: var(--kids-azul); font-size: clamp(32px, 5vw, 46px); }
+    .criancas .rotulo { color: var(--vermelho); }
+    .kids-videos { margin-top: 30px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+    .kids-videos video { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 18px; background: var(--branco); box-shadow: 0 10px 24px rgba(29,161,224,.2); }
+    .kids-info { margin-top: 26px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .kids-info div { padding: 20px; border-radius: 22px; background: var(--branco); border: 2px solid #BFE6F8; }
+    .kids-info h3 { font-family: var(--fonte-kids); font-size: 22px; font-weight: 800; color: var(--marinho); }
+    .kids-info p { margin-top: 4px; color: var(--suave); font-size: 15px; }
+
+    /* ---------- Presencial ou online + quiz ---------- */
+    .modos { margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .modo { padding: 26px; border-radius: 26px; background: var(--branco); border: 1px solid var(--linha); }
+    .modo h3 { font-size: 24px; color: var(--marinho); }
+    .modo__para { margin-top: 4px; font-weight: 700; color: var(--vermelho); }
+    .modo .itens { margin-top: 14px; }
+    .modo--online { background: var(--marinho); color: var(--branco); border-color: var(--marinho); }
+    .modo--online h3 { color: var(--branco); }
+    .modo--online .modo__para { color: var(--kids-amarelo); }
+    .modo--online .itens li::before { background: var(--branco); color: var(--marinho); }
+
+    .quiz { margin-top: 20px; padding: 28px; border-radius: 28px; background: linear-gradient(135deg, var(--vermelho) 0%, var(--vermelho-escuro) 100%); color: var(--branco); }
+    .quiz h3 { font-size: 26px; font-weight: 900; font-style: italic; }
+    .quiz__passo { margin-top: 18px; }
+    .quiz__pergunta { font-family: var(--fonte-titulo); font-size: 19px; font-weight: 800; }
+    .quiz__progresso { font-size: 14px; font-weight: 700; color: rgba(255,255,255,.8); }
+    .quiz__opcoes { margin-top: 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 10px; }
+    .quiz__opcao { padding: 14px 16px; border-radius: 16px; border: 2px solid rgba(255,255,255,.6); background: rgba(255,255,255,.08); color: var(--branco); font-family: var(--fonte-titulo); font-weight: 700; font-size: 15px; text-align: left; cursor: pointer; }
+    .quiz__opcao:hover { background: rgba(255,255,255,.18); }
+    .quiz__resultado { margin-top: 18px; padding: 22px; border-radius: 20px; background: var(--branco); color: var(--texto); }
+    .quiz__resultado h4 { margin: 0; font-family: var(--fonte-titulo); font-size: 22px; font-weight: 900; color: var(--marinho); }
+    .quiz__resultado p { margin-top: 8px; }
+    .quiz__resultado .acoes { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .quiz__refazer { background: none; border: 0; color: var(--vermelho); font-weight: 800; text-decoration: underline; cursor: pointer; font-family: var(--fonte-titulo); }
+
+    /* ---------- Turno ---------- */
+    .turno { background: var(--noite); color: var(--branco); position: relative; overflow: hidden; }
+    .turno::before { content: ""; position: absolute; inset: 0; background: url("img/aguia-fundo.jpg") right bottom / min(640px, 80%) no-repeat; opacity: .5; mix-blend-mode: screen;
+      -webkit-mask-image: radial-gradient(60% 70% at 85% 85%, #000 30%, transparent 100%); mask-image: radial-gradient(60% 70% at 85% 85%, #000 30%, transparent 100%); }
+    .turno .conteudo { position: relative; }
+    .turno h2 { color: var(--branco); }
+    .turno h2 em { color: var(--vermelho); font-style: italic; }
+    .turno .intro { color: rgba(255,255,255,.82); }
+    .turno__cards { margin-top: 26px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; max-width: 900px; }
+    .turno__cards div { padding: 20px; border-radius: 22px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); }
+    .turno__cards b { font-family: var(--fonte-titulo); font-size: 18px; }
+    .turno__cards p { margin-top: 4px; font-size: 15px; color: rgba(255,255,255,.78); }
+    .turno .botao { margin-top: 26px; }
+
+    /* ---------- Demonstração ---------- */
+    .demo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px; }
+    .demo__card { padding: 28px; border-radius: 26px; background: var(--branco); border: 1px solid var(--linha); display: flex; flex-direction: column; }
+    .demo__card--destaque { border: 3px solid var(--vermelho); }
+    .demo__card h3 { font-size: 22px; color: var(--marinho); }
+    .demo__card p { margin-top: 8px; color: var(--suave); flex: 1; }
+    .demo__card .botao { margin-top: 18px; align-self: flex-start; }
+    .demo__selo { align-self: flex-start; margin-bottom: 12px; padding: 4px 12px; border-radius: 999px; background: #FDE7EA; color: var(--vermelho-escuro); font-family: var(--fonte-titulo); font-weight: 800; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+
+    /* ---------- Inclusão ---------- */
+    .inclusao .conteudo { display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: center; }
+
+    /* ---------- Depoimentos ---------- */
+    .depoimentos { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .depoimento { margin: 0; padding: 26px; border-radius: 26px; background: var(--branco); border: 1px solid var(--linha); }
+    .depoimento blockquote { margin: 0; font-family: var(--fonte-titulo); font-size: 20px; font-weight: 700; color: var(--marinho); line-height: 1.4; }
+    .depoimento blockquote::before { content: "“"; display: block; font-size: 60px; line-height: .6; color: var(--vermelho); }
+    .depoimento figcaption { margin-top: 14px; color: var(--suave); font-weight: 700; }
+
+    /* ---------- Dúvidas ---------- */
+    .perguntas { margin-top: 26px; display: grid; gap: 10px; max-width: 820px; }
+    .perguntas details { background: var(--branco); border: 1px solid var(--linha); border-radius: 18px; }
+    .perguntas summary { list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 18px 20px; font-family: var(--fonte-titulo); font-weight: 700; font-size: 17px; color: var(--marinho); cursor: pointer; }
+    .perguntas summary::-webkit-details-marker { display: none; }
+    .perguntas summary::after { content: "+"; color: var(--vermelho); font-size: 24px; font-weight: 800; line-height: 1; }
+    .perguntas details[open] summary::after { content: "–"; }
+    .perguntas details p { padding: 0 20px 18px; color: var(--suave); }
+
+    /* ---------- Chamada final e rodapé ---------- */
+    .chamada { background: radial-gradient(90% 120% at 50% 0%, #0A3A7A 0%, var(--marinho) 55%, var(--noite) 100%); color: var(--branco); text-align: center; }
+    .chamada h2 { color: var(--branco); }
+    .chamada .hero__slogan { margin-top: 10px; }
+    .chamada .intro { margin-left: auto; margin-right: auto; color: rgba(255,255,255,.82); }
+    .chamada .hero__acoes { justify-content: center; }
+    .rodape { background: var(--noite); color: rgba(255,255,255,.8); padding: 40px 0 48px; font-size: 15px; }
+    .rodape .conteudo { display: grid; grid-template-columns: auto 1fr 1fr; gap: 32px; align-items: start; }
+    .rodape img { width: 110px; }
+    .rodape h3 { color: var(--branco); font-size: 16px; margin-bottom: 8px; }
+    .rodape a { color: var(--branco); }
+    .rodape .letras { grid-column: 1 / -1; font-size: 13px; color: rgba(255,255,255,.55); border-top: 1px solid rgba(255,255,255,.12); padding-top: 18px; }
+
+    /* ---------- Celular ---------- */
+    @media (max-width: 860px) {
+      .hero .conteudo, .porque .conteudo, .wizpen .conteudo, .materiais .conteudo, .inclusao .conteudo { grid-template-columns: 1fr; }
+      .painel { grid-template-columns: 1fr; padding: 22px; }
+      .painel__lado { order: -1; }
+      .painel__lado img, .painel__lado video { aspect-ratio: 16 / 10; }
+      .fale { grid-template-columns: 1fr 1fr; }
+      .metodo, .kids-info, .turno__cards { grid-template-columns: 1fr; }
+      .kids-videos { grid-template-columns: repeat(3, 1fr); }
+      .modos, .demo, .depoimentos { grid-template-columns: 1fr; }
+      .porque .video-vertical { max-width: 340px; margin: 0 auto; }
+      .inclusao .video-vertical { max-width: 300px; }
+      .rodape .conteudo { grid-template-columns: 1fr; }
+      .secao { padding: 52px 0; }
+      .hero__faixa--1 { left: -820px; top: -1000px; }
+      .hero__faixa--2 { left: -840px; top: -990px; }
+      .hero .conteudo { padding-block: 48px 56px; }
+    }
+    @media (max-width: 480px) {
+      .fale { grid-template-columns: 1fr; }
+      .kids-videos { grid-template-columns: repeat(2, 1fr); }
+      .hero__acoes .botao { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-whats" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></symbol>
+  </svg>
+
+  <!-- ===== BARRA DO TOPO ===== -->
+  <header class="barra">
+    <div class="conteudo">
+      <a class="barra__marca" href="#inicio" aria-label="Wizard Telêmaco Borba, início">
+        <img class="logo" src="img/logo-wizard.png" alt="Wizard by Pearson" width="725" height="186">
+        <span>Telêmaco<br>Borba</span>
+      </a>
+      <a class="botao botao--whats barra__whats" data-msg="Olá, Evelyn! Vim pelo site da Wizard e quero saber mais sobre o curso de inglês." href="#" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#i-whats"/></svg>WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- ===== TOPO ===== -->
+    <section class="hero">
+      <span class="hero__faixa hero__faixa--1" aria-hidden="true"></span>
+      <span class="hero__faixa hero__faixa--2" aria-hidden="true"></span>
+      <img class="hero__aguia" src="img/aguia-fundo.jpg" alt="" aria-hidden="true">
+      <div class="conteudo">
+        <div>
+          <span class="hero__slogan">Inglês que te leva mais longe</span>
+          <h1>Fale inglês desde a <em>primeira aula.</em></h1>
+          <p class="hero__sub">Turmas de até 6 alunos, a partir de 3 anos. Presencial em Telêmaco Borba ou online para todo o Brasil.</p>
+          <p class="hero__preco"><small>Mensalidades a partir de</small><b>R$ 263</b><small>com material incluso</small></p>
+          <div class="hero__acoes">
+            <a class="botao botao--vermelho" data-msg="Olá, Evelyn! Vim pelo site e quero agendar uma demonstração online de como é a aula da Wizard." href="#" target="_blank" rel="noopener">Quero uma demonstração online</a>
+            <a class="botao botao--contorno" href="#turmas">Ver as turmas</a>
+          </div>
+          <ul class="hero__garantias">
+            <li>Método Wizard by Pearson</li>
+            <li>Até 6 alunos por turma</li>
+            <li>WizPen exclusiva</li>
+          </ul>
+        </div>
+
+        <aside class="consultora" aria-label="Sua consultora">
+          <img src="img/consultora.jpg" alt="Evelyn Hartmann, consultora da Wizard Telêmaco Borba" width="640" height="648">
+          <p class="nome">Evelyn Hartmann</p>
+          <p>Sua consultora na Wizard Telêmaco Borba</p>
+          <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site da Wizard e quero saber mais sobre o curso de inglês." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Falar com a Evelyn</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         TURMAS POR IDADE (grade oficial Wizard)
+         Links diretos: #tots #little-kids #kids #next-generation #teens #adultos
+         ===================================================== -->
+    <section class="secao" id="turmas">
+      <div class="conteudo">
+        <p class="rotulo">Para quem é</p>
+        <h2>Escolha a idade de quem vai estudar</h2>
+        <p class="intro">Cada fase tem o seu material e a sua forma de ensinar. Toque na idade para ver como funciona.</p>
+
+        <div class="abas" role="tablist" aria-label="Turmas por idade">
+          <button class="aba" role="tab" id="aba-tots" aria-controls="tots" aria-selected="true">Tots<small>3 a 5 anos</small></button>
+          <button class="aba" role="tab" id="aba-little-kids" aria-controls="little-kids" aria-selected="false">Little Kids<small>6 e 7 anos</small></button>
+          <button class="aba" role="tab" id="aba-kids" aria-controls="kids" aria-selected="false">Kids<small>8 e 9 anos</small></button>
+          <button class="aba" role="tab" id="aba-next-generation" aria-controls="next-generation" aria-selected="false">Next Generation<small>10 anos</small></button>
+          <button class="aba" role="tab" id="aba-teens" aria-controls="teens" aria-selected="false">Teens<small>11 a 14 anos</small></button>
+          <button class="aba" role="tab" id="aba-adultos" aria-controls="adultos" aria-selected="false">Adultos<small>a partir de 15 anos</small></button>
+        </div>
+
+        <div class="painel painel--kids" id="tots" role="tabpanel" aria-labelledby="aba-tots">
+          <div>
+            <h3>Tots</h3>
+            <p class="painel__idade">3, 4 e 5 anos · Pré 1, Pré 2 e Pré 3</p>
+            <p class="painel__texto">O primeiro contato com o inglês, do jeito que a criança aprende: brincando. Ela ainda não precisa saber ler.</p>
+            <ul class="itens">
+              <li>Músicas, jogos e atividades em cada aula</li>
+              <li>Turmas pequenas, com até 6 crianças</li>
+              <li>Dias e horários fixos, com portão eletrônico e tudo fechado durante a aula</li>
+            </ul>
+            <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
+            <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre a turma Tots (3 a 5 anos)." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber da turma Tots</a>
+          </div>
+          <div class="painel__lado"><video src="videos/kids-01.mp4" poster="videos/kids-01.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Animação: criança aprendendo inglês"></video></div>
+        </div>
+
+        <div class="painel painel--kids" id="little-kids" role="tabpanel" aria-labelledby="aba-little-kids" hidden>
+          <div>
+            <h3>Little Kids</h3>
+            <p class="painel__idade">6 e 7 anos · 1º e 2º ano</p>
+            <p class="painel__texto">Inglês na fase da alfabetização, com o método FALE: fala, audição, leitura e escrita, de forma natural e divertida.</p>
+            <ul class="itens">
+              <li>2 aulas de 1 hora por semana, em dias e horários fixos</li>
+              <li>Material WizKids com mochila e WizPen</li>
+              <li>Turmas de até 6 alunos e professores focados na confiança da criança</li>
+            </ul>
+            <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
+            <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre a turma Little Kids (6 e 7 anos)." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber da turma Little Kids</a>
+          </div>
+          <div class="painel__lado"><img src="img/material-kids.jpg" alt="Material WizKids: mochila, livro Little Kids e WizPen" loading="lazy" width="900" height="1025"></div>
+        </div>
+
+        <div class="painel painel--kids" id="kids" role="tabpanel" aria-labelledby="aba-kids" hidden>
+          <div>
+            <h3>Kids</h3>
+            <p class="painel__idade">8 e 9 anos · 3º e 4º ano</p>
+            <p class="painel__texto">Aulas dinâmicas, com músicas, jogos e muita conversação. A criança sai de cada aula falando coisas novas em inglês.</p>
+            <ul class="itens">
+              <li>2 aulas de 1 hora por semana, em dias e horários fixos</li>
+              <li>Material WizKids com mochila e WizPen</li>
+              <li>Para começar, a criança precisa estar totalmente alfabetizada</li>
+            </ul>
+            <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
+            <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre a turma Kids (8 e 9 anos)." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber da turma Kids</a>
+          </div>
+          <div class="painel__lado"><video src="videos/kids-03.mp4" poster="videos/kids-03.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Animação: ter inglês no vocabulário"></video></div>
+        </div>
+
+        <div class="painel painel--kids" id="next-generation" role="tabpanel" aria-labelledby="aba-next-generation" hidden>
+          <div>
+            <h3>Next Generation</h3>
+            <p class="painel__idade">10 anos · 5º ano</p>
+            <p class="painel__texto">A ponte entre o inglês infantil e o dos adolescentes, para chegar no Teens com base forte e confiança para falar.</p>
+            <ul class="itens">
+              <li>Conversação em todas as aulas</li>
+              <li>Material com WizPen incluso</li>
+              <li>Para começar, a criança precisa estar totalmente alfabetizada</li>
+            </ul>
+            <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
+            <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre a turma Next Generation (10 anos)." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber da turma Next Generation</a>
+          </div>
+          <div class="painel__lado"><video src="videos/kids-05.mp4" poster="videos/kids-05.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Animação: ter mais confiança para falar"></video></div>
+        </div>
+
+        <div class="painel" id="teens" role="tabpanel" aria-labelledby="aba-teens" hidden>
+          <div>
+            <h3>Teens</h3>
+            <p class="painel__idade">11 a 14 anos · 6º ao 9º ano</p>
+            <p class="painel__texto">Inglês para a escola, para os games, para as séries e para o futuro. Com conversação em todas as aulas, o adolescente perde a vergonha de falar.</p>
+            <ul class="itens">
+              <li>Níveis Teens 2, 4, 6 e 8</li>
+              <li>Material com WizPen incluso</li>
+              <li>Já estudou inglês? Um teste de nivelamento encontra o nível certo</li>
+            </ul>
+            <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--sim">Online para todo o Brasil</span></div>
+            <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre a turma Teens (11 a 14 anos)." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber da turma Teens</a>
+          </div>
+          <div class="painel__lado"><img src="img/material-adulto.jpg" alt="Material Wizard com livros, pasta e WizPen" loading="lazy" width="900" height="1265"></div>
+        </div>
+
+        <div class="painel" id="adultos" role="tabpanel" aria-labelledby="aba-adultos" hidden>
+          <div>
+            <h3>Adultos</h3>
+            <p class="painel__idade">A partir de 15 anos · Ensino médio, faculdade e trabalho</p>
+            <p class="painel__texto">Para quem quer aprender de forma prática e rápida, no ritmo da sua rotina. Mesmo começando do zero, você sai da primeira aula falando coisas novas.</p>
+            <div class="niveis">
+              <div class="nivel">W2 e W4<small>Básico</small></div>
+              <div class="nivel">W6 e W8<small>Intermediário</small></div>
+              <div class="nivel">W10 e W12<small>Avançado</small></div>
+            </div>
+            <ul class="itens">
+              <li>No presencial, você agenda as aulas quando quiser, com 4 horas de antecedência</li>
+              <li>Recomendamos 2 aulas por semana, mas você pode fazer quantas quiser</li>
+              <li>Material completo com WizPen e fone de ouvido</li>
+            </ul>
+            <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--sim">Online para todo o Brasil</span></div>
+            <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre o curso de inglês para adultos." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber do curso para adultos</a>
+          </div>
+          <div class="painel__lado"><img src="img/material-adulto.jpg" alt="Material Wizard com livros, pasta e WizPen" loading="lazy" width="900" height="1265"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== POR QUE A WIZARD (vídeo da Evelyn) ===== -->
+    <section class="secao porque" id="por-que">
+      <div class="conteudo">
+        <div class="video-vertical">
+          <video src="videos/por-que-wizard.mp4" poster="videos/por-que-wizard.jpg" controls playsinline preload="none" aria-label="Vídeo da Evelyn explicando por que escolher a Wizard"></video>
+        </div>
+        <div>
+          <p class="rotulo">Por que a Wizard</p>
+          <h2>Vontade de aprender você já tem. Falta o caminho certo.</h2>
+          <p class="intro">Ninguém aprende inglês sem constância, sem prática e sem um caminho para seguir. Na Wizard você tem os três: aulas no seu ritmo, conversação em todas as aulas e um método que vai do básico ao avançado.</p>
+          <blockquote>“Se você quer aprender inglês de verdade, sem complicação, me chama que eu te ajudo a encontrar a melhor turma para você ou para o seu filho.”</blockquote>
+          <a class="botao botao--whats" data-msg="Olá, Evelyn! Assisti seu vídeo no site e quero ajuda para encontrar a melhor turma." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Me ajuda a escolher a turma</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== METODOLOGIA ===== -->
+    <section class="secao" id="metodologia">
+      <div class="conteudo">
+        <p class="rotulo">Metodologia</p>
+        <h2>Aprenda inglês do jeito que você aprendeu o português</h2>
+        <p class="intro">A Wizard trabalha com uma metodologia associada à PNL: muita prática e repetição guiada, para o inglês entrar de forma natural e ficar na memória.</p>
+
+        <div class="fale">
+          <div class="fale__item"><span class="fale__letra">F</span><h3>Fala</h3><p>15 a 20 minutos de conversação com o professor em todas as aulas, desde a primeira.</p></div>
+          <div class="fale__item"><span class="fale__letra">A</span><h3>Audição</h3><p>Você treina o ouvido com o professor, com a plataforma interativa e com a WizPen.</p></div>
+          <div class="fale__item"><span class="fale__letra">L</span><h3>Leitura</h3><p>O professor acompanha a sua leitura em cada lição, como se tomasse a lição.</p></div>
+          <div class="fale__item"><span class="fale__letra">E</span><h3>Escrita</h3><p>Livro de tarefas para fazer em casa ou na escola, sempre corrigido pelo professor.</p></div>
+        </div>
+
+        <div class="metodo">
+          <div class="metodo__item"><b>2<span>×</span>1</b><h3>Aprendizado em escadinha</h3><p>Vocabulário novo a cada duas lições: você aprende numa e treina na seguinte. O conteúdo vai se somando.</p></div>
+          <div class="metodo__item"><b>0 <span>provas</span></b><h3>Avaliação em toda aula</h3><p>Sem prova: o professor avalia sua fala, audição, leitura e escrita em cada aula, e você acompanha a sua evolução.</p></div>
+          <div class="metodo__item"><b>6<span>.</span></b><h3>Alunos por turma, no máximo</h3><p>Turmas pequenas para o professor dar atenção a cada um. Às vezes a aula fica quase particular.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WIZPEN ===== -->
+    <section class="secao wizpen" id="wizpen">
+      <div class="conteudo">
+        <div>
+          <p class="rotulo">Tecnologia exclusiva</p>
+          <h2>WizPen: um professor particular que cabe no bolso</h2>
+          <span class="selo-exclusivo">Patenteada pela Wizard</span>
+          <p class="intro">Encoste a caneta em uma palavra, frase ou imagem do livro e ela lê para você. Nos momentos de conversação, ela fala, faz uma pausa para você responder e fala de novo.</p>
+          <ul class="itens">
+            <li>Funciona como um leitor: cada palavra e imagem do livro tem um código que ela reconhece</li>
+            <li>No começo do livro ela fala mais devagar e, conforme você avança, fala de forma mais natural</li>
+            <li>Funciona em todos os livros, do infantil ao adulto, e vem inclusa no material</li>
+          </ul>
+        </div>
+        <div class="wizpen__fotos">
+          <div class="video-vertical">
+            <video src="videos/wizpen-demonstracao.mp4" poster="videos/wizpen-demonstracao.jpg" controls playsinline preload="none" aria-label="Demonstração da WizPen lendo o livro Kids 2"></video>
+          </div>
+          <img src="img/wizpen-bandeira.jpg" alt="WizPen da Wizard by Pearson" loading="lazy" width="760" height="1350">
+          <img src="img/wizpen-caixa.jpg" alt="WizPen na caixa" loading="lazy" width="760" height="1350">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MATERIAIS ===== -->
+    <section class="secao materiais" id="materiais">
+      <div class="conteudo">
+        <div>
+          <div class="video-horizontal">
+            <video src="videos/materiais.mp4" poster="videos/materiais.jpg" controls playsinline preload="none" aria-label="Vídeo mostrando todos os materiais que o aluno recebe"></video>
+          </div>
+          <div class="materiais__fotos">
+            <figure><img src="img/material-kids.jpg" alt="Material WizKids" loading="lazy" width="900" height="1025"><figcaption>WizKids: mochila, livros e WizPen</figcaption></figure>
+            <figure><img src="img/material-adulto.jpg" alt="Material para adolescentes e adultos" loading="lazy" width="900" height="1265"><figcaption>Teens e adultos: livros, pasta e WizPen</figcaption></figure>
+          </div>
+        </div>
+        <div>
+          <p class="rotulo">O que você recebe</p>
+          <h2>Material completo, incluso na mensalidade</h2>
+          <ul class="itens">
+            <li>Livro de lições, para aprender e praticar em aula</li>
+            <li>Livro de tarefas, para treinar a escrita e a leitura</li>
+            <li>WizPen, a caneta que lê o livro para você</li>
+            <li>Fone de ouvido e pasta (mochila no WizKids)</li>
+            <li>Ficha de frequência, onde o professor avalia cada aula</li>
+          </ul>
+          <p class="intro">O material é pedido assim que você se matricula e chega em cerca de 15 a 20 dias. Aí você faz a Aula Zero, para conhecer tudo, e começa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CRIANÇAS ===== -->
+    <section class="secao criancas" id="criancas">
+      <div class="conteudo">
+        <p class="rotulo">WizKids</p>
+        <h2>Por que começar o inglês na infância?</h2>
+        <p class="intro">Criança aprende brincando e sem medo de errar. Quanto mais cedo começa, mais natural o inglês fica.</p>
+        <div class="kids-videos">
+          <video src="videos/kids-01.mp4" poster="videos/kids-01.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Coisas que acho chique quando se aprende inglês na infância"></video>
+          <video src="videos/kids-02.mp4" poster="videos/kids-02.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Assistir ao desenho favorito e entender as falas"></video>
+          <video src="videos/kids-03.mp4" poster="videos/kids-03.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Ter inglês no vocabulário"></video>
+          <video src="videos/kids-04.mp4" poster="videos/kids-04.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Fazer novos amigos em qualquer lugar do mundo"></video>
+          <video src="videos/kids-05.mp4" poster="videos/kids-05.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Ter mais confiança para falar sobre tudo"></video>
+          <video src="videos/kids-06.mp4" poster="videos/kids-06.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Se preparar desde cedo para um futuro brilhante"></video>
+        </div>
+        <div class="kids-info">
+          <div><h3>Aulas divertidas</h3><p>Músicas, jogos e atividades. O inglês vira brincadeira, e a criança sai falando.</p></div>
+          <div><h3>Segurança total</h3><p>Portão eletrônico e tudo fechado enquanto as crianças estão em aula.</p></div>
+          <div><h3>Rotina organizada</h3><p>2 aulas de 1 hora por semana, em dias e horários fixos, com até 6 alunos por turma.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRESENCIAL OU ONLINE + QUIZ ===== -->
+    <section class="secao" id="presencial-online">
+      <div class="conteudo">
+        <p class="rotulo">Como estudar</p>
+        <h2>Presencial ou online: a mesma metodologia</h2>
+
+        <div class="modos">
+          <div class="modo">
+            <h3>Presencial</h3>
+            <p class="modo__para">Telêmaco Borba · todas as idades</p>
+            <ul class="itens">
+              <li>Rua Leopoldo J. M. Voigt, 90, Centro</li>
+              <li>Segunda a sexta, das 8h às 21h. Sábado, das 8h às 12h</li>
+              <li>Adultos agendam as aulas com 4 horas de antecedência</li>
+              <li>Crianças estudam em dias e horários fixos</li>
+            </ul>
+          </div>
+          <div class="modo modo--online">
+            <h3>Online · Wizard On</h3>
+            <p class="modo__para">Todo o Brasil · a partir de 11 anos</p>
+            <ul class="itens">
+              <li>Aulas ao vivo com o teacher e tempo de conversação</li>
+              <li>Material completo com WizPen entregue em casa</li>
+              <li>Horário fixo, com reposição se precisar faltar</li>
+              <li>Suporte da escola de Telêmaco Borba</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Quiz: presencial ou online -->
+        <div class="quiz" id="quiz">
+          <h3>Descubra em 3 perguntas qual é o melhor para você</h3>
+
+          <div class="quiz__passo" data-passo="1">
+            <p class="quiz__progresso">Pergunta 1 de 3</p>
+            <p class="quiz__pergunta">Quem vai estudar?</p>
+            <div class="quiz__opcoes">
+              <button class="quiz__opcao" type="button" data-campo="quem" data-valor="crianca" data-texto="uma criança de 3 a 10 anos">Uma criança de 3 a 10 anos</button>
+              <button class="quiz__opcao" type="button" data-campo="quem" data-valor="teen" data-texto="um adolescente de 11 a 14 anos">Um adolescente de 11 a 14 anos</button>
+              <button class="quiz__opcao" type="button" data-campo="quem" data-valor="adulto" data-texto="eu, com 15 anos ou mais">Eu, com 15 anos ou mais</button>
+            </div>
+          </div>
+
+          <div class="quiz__passo" data-passo="2" hidden>
+            <p class="quiz__progresso">Pergunta 2 de 3</p>
+            <p class="quiz__pergunta">Onde você mora?</p>
+            <div class="quiz__opcoes">
+              <button class="quiz__opcao" type="button" data-campo="onde" data-valor="tb" data-texto="em Telêmaco Borba ou região">Em Telêmaco Borba ou região</button>
+              <button class="quiz__opcao" type="button" data-campo="onde" data-valor="fora" data-texto="em outra cidade">Em outra cidade</button>
+            </div>
+          </div>
+
+          <div class="quiz__passo" data-passo="3" hidden>
+            <p class="quiz__progresso">Pergunta 3 de 3</p>
+            <p class="quiz__pergunta">Como é a rotina de quem vai estudar?</p>
+            <div class="quiz__opcoes">
+              <button class="quiz__opcao" type="button" data-campo="rotina" data-valor="fixa" data-texto="rotina com horários fixos">Tenho horários fixos durante a semana</button>
+              <button class="quiz__opcao" type="button" data-campo="rotina" data-valor="turno" data-texto="trabalho de turno ou horários que mudam">Trabalho de turno ou meus horários mudam</button>
+              <button class="quiz__opcao" type="button" data-campo="rotina" data-valor="casa" data-texto="prefiro estudar sem sair de casa">Prefiro estudar sem sair de casa</button>
+            </div>
+          </div>
+
+          <div class="quiz__resultado" id="quiz-resultado" hidden>
+            <h4 id="quiz-titulo"></h4>
+            <p id="quiz-texto"></p>
+            <div class="acoes">
+              <a class="botao botao--whats" id="quiz-whats" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Enviar meu resultado para a Evelyn</a>
+              <button class="quiz__refazer" type="button" id="quiz-refazer">Refazer o quiz</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRABALHA DE TURNO ===== -->
+    <section class="secao turno" id="turno">
+      <div class="conteudo">
+        <p class="rotulo">Para quem trabalha de turno</p>
+        <h2>Sua escala muda toda semana? <em>Seu inglês acompanha.</em></h2>
+        <p class="intro">Turno 6x4, revezamento ou horário que muda toda semana: na Wizard você não fica preso a uma turma fixa.</p>
+        <div class="turno__cards">
+          <div><b>Agende quando puder</b><p>No presencial, marque a aula com 4 horas de antecedência, de segunda a sábado.</p></div>
+          <div><b>Estude nas folgas</b><p>Faça mais aulas na semana de folga e menos na semana puxada. Você controla o ritmo.</p></div>
+          <div><b>Ou estude de casa</b><p>No Wizard On, as aulas são ao vivo e você pode repor a aula que perder.</p></div>
+        </div>
+        <a class="botao botao--vermelho" data-msg="Olá, Evelyn! Trabalho de turno e quero saber como encaixar o inglês na minha escala." href="#" target="_blank" rel="noopener">Quero estudar no meu horário</a>
+      </div>
+    </section>
+
+    <!-- ===== DEMONSTRAÇÃO ===== -->
+    <section class="secao" id="demonstracao">
+      <div class="conteudo">
+        <p class="rotulo">Antes de decidir</p>
+        <h2>Veja como é a aula antes de se matricular</h2>
+        <div class="demo">
+          <div class="demo__card demo__card--destaque">
+            <span class="demo__selo">Sem sair de casa</span>
+            <h3>Demonstração online comigo</h3>
+            <p>Numa videochamada rápida, eu te mostro como funciona a aula, o material e a WizPen, e tiro todas as suas dúvidas. Sem compromisso.</p>
+            <a class="botao botao--whats" data-msg="Olá, Evelyn! Quero agendar uma demonstração online de como é a aula da Wizard." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Agendar demonstração online</a>
+          </div>
+          <div class="demo__card">
+            <span class="demo__selo">Na escola</span>
+            <h3>Aula experimental ou nivelamento</h3>
+            <p>Prefere conhecer pessoalmente? Na escola em Telêmaco Borba, os nossos teachers fazem a aula experimental ou o teste de nivelamento, para encontrar o nível certo para você.</p>
+            <a class="botao botao--claro" data-msg="Olá, Evelyn! Quero agendar uma aula experimental ou um teste de nivelamento na escola em Telêmaco Borba." href="#" target="_blank" rel="noopener">Agendar na escola</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INCLUSÃO ===== -->
+    <section class="secao inclusao" id="inclusao">
+      <div class="conteudo">
+        <div class="video-vertical">
+          <video src="videos/braille.mp4" poster="videos/braille.jpg" muted loop playsinline controls preload="none" aria-label="Livro Wizard em braille"></video>
+        </div>
+        <div>
+          <p class="rotulo">Inglês para todos</p>
+          <h2>Material também em braille</h2>
+          <p class="intro">A Wizard tem livros em braille, para que alunos com deficiência visual aprendam inglês com o mesmo método e o mesmo conteúdo da turma.</p>
+          <a class="botao botao--claro" data-msg="Olá, Evelyn! Quero saber mais sobre o material da Wizard em braille." href="#" target="_blank" rel="noopener">Quero saber mais</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DEPOIMENTOS ===== -->
+    <section class="secao" id="depoimentos" style="padding-top: 0">
+      <div class="conteudo">
+        <p class="rotulo">Quem estuda conta</p>
+        <h2>O que dizem alunos e famílias</h2>
+        <div class="depoimentos">
+          <figure class="depoimento">
+            <blockquote>Consigo relembrar bastante coisa e complementar. As aulas estão me ajudando bem!</blockquote>
+            <figcaption>Alexandre · aluno adulto</figcaption>
+          </figure>
+          <figure class="depoimento">
+            <blockquote>Ele ficou super animado com as aulas. Gostou muito!</blockquote>
+            <figcaption>Carol · mãe de aluno do Kids</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DÚVIDAS ===== -->
+    <section class="secao" id="duvidas" style="padding-top: 0">
+      <div class="conteudo">
+        <p class="rotulo">Dúvidas</p>
+        <h2>Perguntas frequentes</h2>
+        <div class="perguntas">
+          <details><summary>Criança de 3 anos aprende inglês mesmo?</summary><p>Aprende, e com facilidade. Na turma Tots, o inglês entra pela brincadeira: músicas, histórias e atividades. A criança ainda não precisa saber ler.</p></details>
+          <details><summary>Em quanto tempo eu começo a falar?</summary><p>Desde a primeira aula. Em todas as aulas, mesmo no nível básico, há 15 a 20 minutos de conversação com o professor sobre o que você acabou de estudar.</p></details>
+          <details><summary>Já estudei inglês. Preciso começar do zero?</summary><p>Não. Fazemos um teste de nivelamento rápido para pedir o livro do seu nível certinho.</p></details>
+          <details><summary>Tem prova?</summary><p>Não. Você é avaliado em todas as aulas, nos quatro pilares: fala, audição, leitura e escrita. Assim você e o professor acompanham a sua evolução de perto.</p></details>
+          <details><summary>Quanto tempo dura o curso?</summary><p>O contrato é de 12 meses, tempo para concluir um módulo inteiro. Depois você pode se rematricular e seguir para o próximo nível.</p></details>
+          <details><summary>O material está incluso?</summary><p>Sim. A mensalidade já inclui os livros, a WizPen e os demais materiais. Eles chegam em cerca de 15 a 20 dias depois da matrícula.</p></details>
+          <details><summary>Criança pode fazer o curso online?</summary><p>O Wizard On é a partir de 11 anos (Teens). Até 10 anos, as aulas são presenciais, na escola em Telêmaco Borba.</p></details>
+          <details><summary>E se eu precisar faltar?</summary><p>No presencial para adultos, você agenda a aula no horário que quiser, então é só remarcar. No online, você pode repor a aula: basta mandar uma mensagem para agendar.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CHAMADA FINAL ===== -->
+    <section class="secao chamada">
+      <div class="conteudo">
+        <h2>Pronto para começar o inglês?</h2>
+        <span class="hero__slogan">Inglês que te leva mais longe</span>
+        <p class="intro" style="margin-top: 18px">Me conta quem vai estudar e eu te ajudo a encontrar a melhor turma, presencial ou online.</p>
+        <div class="hero__acoes">
+          <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero começar o inglês na Wizard." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Falar com a Evelyn</a>
+          <a class="botao botao--contorno" href="#quiz">Fazer o quiz</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="conteudo">
+      <img src="img/selo-wizard-telemaco.png" alt="Wizard Telêmaco Borba" width="600" height="600" loading="lazy">
+      <div>
+        <h3>Wizard by Pearson · Telêmaco Borba</h3>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Leopoldo+J.+M.+Voigt%2C+90%2C+Centro%2C+Tel%C3%AAmaco+Borba+PR" target="_blank" rel="noopener">Rua Leopoldo J. M. Voigt, 90, Centro</a></p>
+        <p>Telêmaco Borba, PR</p>
+        <p>Segunda a sexta, das 8h às 21h · Sábado, das 8h às 12h</p>
+      </div>
+      <div>
+        <h3>Atendimento</h3>
+        <p>Evelyn Hartmann, consultora</p>
+        <p>WhatsApp (42) 99824-2620</p>
+      </div>
+      <p class="letras">Valores e condições sujeitos a alteração e disponibilidade de turma. Mensalidade a partir de R$ 263, com material incluso.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* =========================================================
+       WHATSAPP DA EVELYN — 55 + DDD + número, só números
+       ========================================================= */
+    var WHATSAPP = "5542998242620";
+
+    function linkWhats(msg) {
+      return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg);
+    }
+    document.querySelectorAll("[data-msg]").forEach(function (a) {
+      a.href = linkWhats(a.dataset.msg);
+    });
+
+    // Abas das turmas (abre a turma do link, ex.: #teens)
+    var abas = document.querySelectorAll(".aba");
+    function abrirTurma(id, rolar) {
+      var achou = false;
+      abas.forEach(function (aba) {
+        var ativa = aba.getAttribute("aria-controls") === id;
+        if (ativa) achou = true;
+        aba.setAttribute("aria-selected", ativa);
+        document.getElementById(aba.getAttribute("aria-controls")).hidden = !ativa;
+      });
+      if (achou && rolar) document.getElementById("turmas").scrollIntoView({ block: "start" });
+      return achou;
+    }
+    abas.forEach(function (aba) {
+      aba.addEventListener("click", function () {
+        abrirTurma(aba.getAttribute("aria-controls"), false);
+        history.replaceState(null, "", "#" + aba.getAttribute("aria-controls"));
+      });
+    });
+    function lerLink() {
+      var id = location.hash.replace("#", "");
+      if (id && !abrirTurma(id, true)) abrirTurma("tots", false);
+    }
+    window.addEventListener("hashchange", lerLink);
+    if (location.hash) lerLink();
+
+    // Quiz: presencial ou online
+    var respostas = {};
+    var passos = document.querySelectorAll(".quiz__passo");
+    function mostrarPasso(n) {
+      passos.forEach(function (p) { p.hidden = p.dataset.passo !== String(n); });
+      document.getElementById("quiz-resultado").hidden = n !== "fim";
+    }
+    function resultado() {
+      var quem = respostas.quem && respostas.quem.valor;
+      var onde = respostas.onde && respostas.onde.valor;
+      var rotina = respostas.rotina && respostas.rotina.valor;
+      if (quem === "crianca" && onde === "fora") {
+        return ["Presencial em Telêmaco Borba", "Para crianças de 3 a 10 anos, as aulas são presenciais, na escola em Telêmaco Borba. Fale comigo que eu vejo com você a melhor opção."];
+      }
+      if (quem === "crianca") {
+        return ["Presencial, com turma fixa", "Para crianças, o presencial é o ideal: 2 aulas por semana em horário fixo, turmas de até 6 alunos, músicas, jogos e portão eletrônico."];
+      }
+      if (onde === "fora" || rotina === "casa") {
+        return ["Online: Wizard On", "Aulas ao vivo com o teacher, a mesma metodologia do presencial e o material com WizPen entregue na sua casa."];
+      }
+      if (rotina === "turno") {
+        return ["Presencial com horários livres", "Você agenda cada aula com 4 horas de antecedência, de segunda a sábado, e encaixa o inglês na sua escala. Se preferir, o online também funciona."];
+      }
+      return ["Presencial ou online: os dois combinam com você", "Com rotina fixa, você pode estudar na escola em Telêmaco Borba ou ao vivo pelo Wizard On. Eu te ajudo a escolher a melhor turma."];
+    }
+    document.querySelectorAll(".quiz__opcao").forEach(function (b) {
+      b.addEventListener("click", function () {
+        respostas[b.dataset.campo] = { valor: b.dataset.valor, texto: b.dataset.texto };
+        var atual = Number(b.closest(".quiz__passo").dataset.passo);
+        // Para crianças a rotina não muda a resposta: pula a 3ª pergunta
+        var fim = atual === 3 || (atual === 2 && respostas.quem.valor === "crianca");
+        if (!fim) { mostrarPasso(atual + 1); return; }
+        var r = resultado();
+        document.getElementById("quiz-titulo").textContent = r[0];
+        document.getElementById("quiz-texto").textContent = r[1];
+        document.getElementById("quiz-whats").href = linkWhats(
+          "Olá, Evelyn! Fiz o quiz do site. Quem vai estudar: " + respostas.quem.texto +
+          ". Moro " + respostas.onde.texto + "." +
+          (respostas.rotina ? " Rotina: " + respostas.rotina.texto + "." : "") +
+          " Resultado: " + r[0] + "."
+        );
+        mostrarPasso("fim");
+      });
+    });
+    document.getElementById("quiz-refazer").addEventListener("click", function () {
+      respostas = {};
+      mostrarPasso(1);
+    });
+
+    // Vídeos em loop só tocam quando aparecem na tela (economiza internet)
+    if ("IntersectionObserver" in window) {
+      var loops = document.querySelectorAll("video[autoplay]");
+      var obs = new IntersectionObserver(function (entradas) {
+        entradas.forEach(function (e) {
+          if (e.isIntersecting) { e.target.play().catch(function () {}); }
+          else { e.target.pause(); }
+        });
+      }, { threshold: 0.2 });
+      loops.forEach(function (v) { obs.observe(v); });
+    }
+  </script>
+</body>
+</html>
