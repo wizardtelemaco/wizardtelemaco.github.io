@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://wizardtelemaco.github.io/">
   <meta property="og:title" content="Wizard Telêmaco Borba | Inglês que te leva mais longe">
-  <meta property="og:description" content="Fale inglês desde a primeira aula. Turmas de até 6 alunos, a partir de 3 anos. Presencial em Telêmaco Borba ou online.">
+  <meta property="og:description" content="Comece o inglês agora e pague a 1ª mensalidade só em janeiro. Turmas de até 6 alunos, a partir de 3 anos. Presencial em Telêmaco Borba ou online.">
   <meta property="og:image" content="https://wizardtelemaco.github.io/img/capa.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -115,19 +115,60 @@
     .hero h1 { margin-top: 14px; font-size: clamp(38px, 6.4vw, 64px); font-weight: 900; font-style: italic; letter-spacing: -.02em; }
     .hero h1 em { font-style: italic; color: var(--vermelho); }
     .hero__sub { margin-top: 18px; max-width: 540px; font-size: 19px; color: rgba(255,255,255,.88); }
-    .hero__preco { margin-top: 22px; display: inline-flex; align-items: baseline; gap: 8px; flex-wrap: wrap; padding: 10px 18px; border-radius: 14px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); }
+    .hero__oferta { margin-top: 22px; display: flex; align-items: center; gap: 10px; width: fit-content; max-width: 100%; padding: 8px 16px 8px 8px; border-radius: 18px; background: var(--kids-amarelo); color: var(--noite); font-family: var(--fonte-titulo); font-weight: 800; font-size: 15px; line-height: 1.3; text-decoration: none; box-shadow: 0 10px 24px rgba(0,0,0,.25); }
+    .hero__oferta span { flex: none; padding: 4px 10px; border-radius: 999px; background: var(--vermelho); color: var(--branco); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    .hero__preco { margin-top: 14px; display: inline-flex; align-items: baseline; gap: 8px; flex-wrap: wrap; padding: 10px 18px; border-radius: 14px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); }
     .hero__preco small { font-size: 14px; color: rgba(255,255,255,.8); }
     .hero__preco b { font-family: var(--fonte-titulo); font-size: 28px; font-weight: 900; }
     .hero__acoes { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 12px; }
-    .hero__garantias { list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 22px; font-weight: 700; font-size: 15px; }
-    .hero__garantias li { display: flex; align-items: center; gap: 8px; }
-    .hero__garantias li::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--vermelho); box-shadow: 0 0 0 3px rgba(237,14,44,.25); }
 
     .consultora { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); border-radius: 28px; padding: 24px; text-align: center; backdrop-filter: blur(4px); }
     .consultora img { width: min(260px, 70%); margin: 0 auto; border-radius: 50%; }
     .consultora .nome { margin-top: 16px; font-family: var(--fonte-titulo); font-size: 22px; font-weight: 800; }
     .consultora p { margin-top: 4px; font-size: 15px; color: rgba(255,255,255,.8); }
     .consultora .botao { margin-top: 16px; width: 100%; }
+
+    /* ---------- Faixa da oferta (acima da barra) ---------- */
+    .faixa-oferta { display: block; padding: 9px 16px; background: var(--vermelho); color: var(--branco); text-align: center; text-decoration: none; font-family: var(--fonte-titulo); font-size: 14px; font-weight: 600; line-height: 1.35; }
+    .faixa-oferta b { font-weight: 800; }
+    .faixa-oferta span { margin-left: 6px; font-weight: 800; color: var(--kids-amarelo); white-space: nowrap; }
+
+    /* ---------- Faixa de confiança ---------- */
+    .confianca { position: relative; z-index: 2; margin-top: -34px; }
+    .confianca__lista { list-style: none; margin: 0; padding: 18px 10px; display: grid; grid-template-columns: repeat(4, 1fr); background: var(--branco); border-radius: 24px; box-shadow: 0 18px 40px rgba(0,33,77,.14); }
+    .confianca__lista li { padding: 4px 16px; border-left: 1px solid var(--linha); line-height: 1.3; }
+    .confianca__lista li:first-child { border-left: 0; }
+    .confianca__lista b { display: block; font-family: var(--fonte-titulo); font-size: 20px; font-weight: 900; font-style: italic; color: var(--marinho); }
+    .confianca__lista span { font-size: 14px; color: var(--suave); }
+
+    /* ---------- Oferta de fim de ano ---------- */
+    .oferta-secao { padding-top: 48px; }
+    .oferta__card { position: relative; overflow: hidden; padding: 36px; border-radius: 32px; color: var(--branco); background: radial-gradient(120% 120% at 100% 0%, #FF3B55 0%, var(--vermelho) 40%, var(--vermelho-escuro) 100%); box-shadow: 0 24px 50px rgba(196,10,34,.3); }
+    .oferta__card::after { content: "2027"; position: absolute; right: -6px; top: -36px; font-family: var(--fonte-titulo); font-weight: 900; font-style: italic; font-size: 200px; line-height: 1; color: rgba(255,255,255,.08); pointer-events: none; }
+    .oferta__card > * { position: relative; z-index: 1; }
+    .oferta__card .rotulo { color: var(--kids-amarelo); }
+    .secao .oferta__card h2 { color: var(--branco); }
+    .secao .oferta__card .intro { color: rgba(255,255,255,.92); }
+    .oferta__frase { margin-top: 12px; font-family: var(--fonte-script); font-size: 30px; font-weight: 700; line-height: 1.2; }
+    .oferta__linha { list-style: none; margin: 26px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .oferta__linha li { padding: 18px 20px; border-radius: 20px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); }
+    .oferta__linha li:last-child { background: var(--branco); color: var(--texto); border-color: var(--branco); }
+    .oferta__quando { display: inline-block; padding: 3px 10px; border-radius: 999px; background: rgba(0,0,0,.2); font-family: var(--fonte-titulo); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .oferta__linha li:last-child .oferta__quando { background: var(--vermelho); color: var(--branco); }
+    .oferta__linha b { display: block; margin-top: 10px; font-family: var(--fonte-titulo); font-size: 19px; font-weight: 800; line-height: 1.25; }
+    .oferta__linha li:last-child b { color: var(--marinho); }
+    .oferta__linha p { margin-top: 4px; font-size: 15px; opacity: .9; }
+    .oferta__rodape { margin-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap; }
+    .oferta__contador { flex: 1 1 340px; font-size: 17px; }
+    .oferta__dias { display: block; margin-bottom: 2px; font-family: var(--fonte-titulo); font-size: 20px; font-weight: 800; }
+    .oferta__contador b { font-family: var(--fonte-titulo); font-size: 36px; font-weight: 900; font-style: italic; color: var(--kids-amarelo); vertical-align: -4px; }
+    .botao--branco { background: var(--branco); color: var(--vermelho); box-shadow: 0 12px 26px rgba(0,0,0,.2); }
+    .botao--branco:hover { background: #FFE9EC; }
+    .oferta__escassez { margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.25); font-weight: 700; }
+    .oferta__letras { margin-top: 4px; font-size: 13px; opacity: .78; }
+
+    /* ---------- Barra fixa do celular ---------- */
+    .barra-cta { display: none; }
 
     /* ---------- Turmas por idade ---------- */
     .abas { margin-top: 28px; display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
@@ -215,6 +256,29 @@
     .fale__item:nth-child(4) .fale__letra { background: var(--vermelho); }
     .fale__item h3 { margin-top: 14px; font-size: 20px; color: var(--marinho); }
     .fale__item p { margin-top: 6px; color: var(--suave); font-size: 15px; }
+    .comparacao { margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .comparacao__col { padding: 26px; border-radius: 26px; }
+    .comparacao__col h3 { font-size: 20px; }
+    .comparacao__col ul { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; }
+    .comparacao__col li { display: grid; grid-template-columns: 24px 1fr; gap: 10px; }
+    .comparacao__col li::before { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; font-weight: 900; font-size: 13px; margin-top: 2px; }
+    .comparacao__col--antes { background: var(--branco); border: 1px solid var(--linha); color: var(--suave); }
+    .comparacao__col--antes h3 { color: var(--suave); }
+    .comparacao__col--antes li::before { content: "✕"; background: #ECEEF3; color: var(--suave); }
+    .comparacao__col--wizard { background: var(--marinho); color: var(--branco); box-shadow: 0 18px 40px rgba(0,33,77,.2); }
+    .comparacao__col--wizard li { font-weight: 700; }
+    .comparacao__col--wizard li::before { content: "✓"; background: var(--vermelho); color: var(--branco); }
+    .aula { margin-top: 18px; display: grid; grid-template-columns: 300px 1fr; gap: 36px; align-items: center; padding: 28px; border-radius: 28px; background: var(--branco); border: 1px solid var(--linha); }
+    .aula h3 { font-size: 26px; color: var(--marinho); }
+    .aula__sub { margin-top: 6px; color: var(--suave); }
+    .aula__passos { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 14px; }
+    .aula__passos li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; }
+    .aula__passos li > span { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 12px; background: #FDE7EA; color: var(--vermelho); font-weight: 900; }
+    .aula__passos b { display: block; font-family: var(--fonte-titulo); color: var(--marinho); font-size: 17px; }
+    .aula__passos p { color: var(--suave); font-size: 15px; }
+    .aula__pnl { margin-top: 18px; padding: 14px 16px; border-radius: 16px; background: var(--fundo); font-size: 15px; }
+    .metodologia__sub { margin-top: 40px; font-size: 24px; color: var(--marinho); }
+    .metodologia__cta { margin-top: 26px; }
     .metodo { margin-top: 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
     .metodo__item { padding: 22px; border-radius: 22px; background: var(--marinho); color: var(--branco); }
     .metodo__item b { display: block; font-family: var(--fonte-titulo); font-size: 34px; font-weight: 900; font-style: italic; color: var(--branco); line-height: 1.1; }
@@ -300,15 +364,24 @@
     .demo__card .botao { margin-top: 18px; align-self: flex-start; }
     .demo__selo { align-self: flex-start; margin-bottom: 12px; padding: 4px 12px; border-radius: 999px; background: #FDE7EA; color: var(--vermelho-escuro); font-family: var(--fonte-titulo); font-weight: 800; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
 
+    .passos { margin-top: 18px; padding: 28px; border-radius: 26px; background: var(--marinho); color: var(--branco); }
+    .passos h3 { font-size: 22px; }
+    .passos ol { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .passos li { display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: start; }
+    .passos li > span { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: var(--vermelho); font-family: var(--fonte-titulo); font-weight: 900; font-style: italic; font-size: 18px; }
+    .passos b { font-family: var(--fonte-titulo); font-size: 17px; }
+    .passos p { margin-top: 2px; font-size: 15px; color: rgba(255,255,255,.8); }
+    .passos__oferta { color: var(--kids-amarelo); font-weight: 700; }
+
     /* ---------- Inclusão ---------- */
     .inclusao .conteudo { display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: center; }
 
     /* ---------- Depoimentos ---------- */
-    .depoimentos-grade { margin-top: 28px; display: grid; grid-template-columns: 340px 1fr; gap: 24px; align-items: start; }
+    .depoimentos-grade { margin-top: 28px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; align-items: start; }
     .video-youtube iframe { width: 100%; height: 100%; border: 0; display: block; }
-    .depoimentos-lado { display: grid; gap: 16px; }
     .video-horizontal { border-radius: 26px; overflow: hidden; background: var(--noite); box-shadow: 0 24px 50px rgba(0,0,0,.35); aspect-ratio: 16 / 9; }
-    .depoimentos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .depoimentos { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .depoimentos__cta { margin-top: 24px; }
     .depoimento { margin: 0; padding: 26px; border-radius: 26px; background: var(--branco); border: 1px solid var(--linha); }
     .depoimento blockquote { margin: 0; font-family: var(--fonte-titulo); font-size: 20px; font-weight: 700; color: var(--marinho); line-height: 1.4; }
     .depoimento blockquote::before { content: "“"; display: block; font-size: 60px; line-height: .6; color: var(--vermelho); }
@@ -329,6 +402,8 @@
     .chamada .hero__slogan { margin-top: 10px; }
     .chamada .intro { margin-left: auto; margin-right: auto; color: rgba(255,255,255,.82); }
     .chamada .hero__acoes { justify-content: center; }
+    .chamada__oferta { margin: 18px auto 0; max-width: 620px; padding: 14px 18px; border-radius: 16px; background: rgba(255,199,44,.12); border: 1px solid rgba(255,199,44,.5); }
+    .chamada__oferta b { color: var(--kids-amarelo); }
     .rodape { background: var(--noite); color: rgba(255,255,255,.8); padding: 40px 0 48px; font-size: 15px; }
     .rodape .conteudo { display: grid; grid-template-columns: auto 1fr 1fr; gap: 32px; align-items: start; }
     .rodape img { width: 110px; }
@@ -345,7 +420,22 @@
       .fale { grid-template-columns: 1fr 1fr; }
       .metodo, .kids-info, .turno__cards { grid-template-columns: 1fr; }
       .kids-videos { grid-template-columns: repeat(3, 1fr); }
-      .modos, .demo, .depoimentos, .depoimentos-grade { grid-template-columns: 1fr; }
+      .modos, .demo, .depoimentos, .depoimentos-grade, .comparacao, .aula { grid-template-columns: 1fr; }
+      .aula { padding: 20px; }
+      .passos { padding: 22px; }
+      .passos ol { grid-template-columns: 1fr; }
+      .confianca__lista { grid-template-columns: 1fr 1fr; gap: 14px 0; }
+      .confianca__lista li:nth-child(3) { border-left: 0; }
+      .oferta__card { padding: 26px 20px; }
+      .oferta__card::after { font-size: 120px; top: -20px; }
+      .oferta__linha { grid-template-columns: 1fr; }
+      .barra-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: var(--marinho-escuro); color: var(--branco); box-shadow: 0 -8px 24px rgba(0,0,0,.25); transform: translateY(110%); transition: transform .25s ease; }
+      .barra-cta.visivel { transform: none; }
+      .barra-cta p { line-height: 1.25; }
+      .barra-cta b { display: block; font-family: var(--fonte-titulo); font-size: 15px; }
+      .barra-cta small { font-size: 13px; color: rgba(255,255,255,.75); }
+      .barra-cta .botao { min-height: 44px; padding: 10px 16px; font-size: 14px; flex: none; }
+      .rodape { padding-bottom: 110px; }
       .video-vertical.video-youtube { max-width: 340px; width: 100%; margin: 0 auto; }
       .turno__grade { grid-template-columns: 1fr; }
       .turno__grade .video-vertical { max-width: 300px; width: 100%; margin: 0 auto; }
@@ -373,6 +463,9 @@
     <symbol id="i-whats" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></symbol>
   </svg>
 
+  <!-- ===== FAIXA DA OFERTA (some sozinha depois de OFERTA_ATE, no fim do arquivo) ===== -->
+  <a class="faixa-oferta" href="#oferta" data-oferta><b>Matrícula de fim de ano:</b> comece agora e pague a 1ª mensalidade só em janeiro <span>Saiba mais →</span></a>
+
   <!-- ===== BARRA DO TOPO ===== -->
   <header class="barra">
     <div class="conteudo">
@@ -397,17 +490,12 @@
           <span class="hero__slogan">Inglês que te leva mais longe</span>
           <h1>Fale inglês desde a <em>primeira aula.</em></h1>
           <p class="hero__sub">Turmas de até 6 alunos, a partir de 3 anos. Presencial em Telêmaco Borba ou online para todo o Brasil.</p>
-          <p class="hero__preco"><small>Mensalidades a partir de</small><b>R$ 263</b><small>com material incluso</small></p>
+          <a class="hero__oferta" href="#oferta" data-oferta><span>Fim de ano</span>Comece agora e pague a 1ª mensalidade só em janeiro</a>
+          <p class="hero__preco"><small>Mensalidades a partir de</small><b>R$ 263</b><small>com material incluso: menos de R$ 9 por dia</small></p>
           <div class="hero__acoes">
-            <a class="botao botao--vermelho" data-msg="Olá, Evelyn! Vim pelo site e quero agendar uma demonstração online de como é a aula da Wizard." href="#" target="_blank" rel="noopener">Quero uma demonstração online</a>
-            <a class="botao botao--contorno" href="#turmas">Ver as turmas</a>
+            <a class="botao botao--vermelho" data-oferta data-msg="Olá, Evelyn! Vi no site que, matriculando agora, a 1ª mensalidade fica só para janeiro. Quero garantir minha vaga!" href="#" target="_blank" rel="noopener">Garantir minha vaga</a>
+            <a class="botao botao--contorno" data-msg="Olá, Evelyn! Vim pelo site e quero agendar uma demonstração online de como é a aula da Wizard." href="#" target="_blank" rel="noopener">Ver demonstração online</a>
           </div>
-          <ul class="hero__garantias">
-            <li>Método Wizard by Pearson</li>
-            <li>Até 6 alunos por turma</li>
-            <li>WizPen exclusiva</li>
-            <li>Material incluso na mensalidade</li>
-          </ul>
         </div>
 
         <aside class="consultora" aria-label="Sua consultora">
@@ -416,6 +504,174 @@
           <p>Sua consultora na Wizard Telêmaco Borba</p>
           <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site da Wizard e quero saber mais sobre o curso de inglês." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Falar com a Evelyn</a>
         </aside>
+      </div>
+    </section>
+
+    <!-- ===== CONFIANÇA ===== -->
+    <section class="confianca" aria-label="Por que confiar na Wizard">
+      <div class="conteudo">
+        <ul class="confianca__lista">
+          <li><b>Desde 1987</b><span>ensinando inglês no Brasil</span></li>
+          <li><b>Maior rede</b><span>de escolas de idiomas do Brasil</span></li>
+          <li><b>by Pearson</b><span>empresa global de educação</span></li>
+          <li><b>Até 6 alunos</b><span>por turma, com conversação em toda aula</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         OFERTA DE FIM DE ANO
+         Some sozinha do site depois de OFERTA_ATE (no fim do arquivo).
+         ===================================================== -->
+    <section class="secao oferta-secao" id="oferta" data-oferta>
+      <div class="conteudo">
+        <div class="oferta__card">
+          <p class="rotulo">Oferta de fim de ano</p>
+          <h2>Sua meta de 2027 começa agora.</h2>
+          <p class="intro">Todo fim de ano a promessa é a mesma: “ano que vem eu aprendo inglês”. Aqui você não precisa esperar. Matricule-se agora, comece as aulas e pague a 1ª mensalidade só em janeiro.</p>
+          <p class="oferta__frase">Enquanto muita gente ainda vai começar, você chega em 2027 falando.</p>
+          <ol class="oferta__linha">
+            <li><span class="oferta__quando">Hoje</span><b>Você garante a sua vaga</b><p>Escolhe o horário e faz a matrícula.</p></li>
+            <li><span class="oferta__quando">Até janeiro</span><b>Já estuda, sem pagar mensalidade</b><p>Aulas com conversação desde o começo.</p></li>
+            <li><span class="oferta__quando">Janeiro</span><b>1ª mensalidade</b><p>E a sua meta de ano novo já está em andamento.</p></li>
+          </ol>
+          <div class="oferta__rodape">
+            <p class="oferta__contador"><span class="oferta__dias" id="contador-janeiro">Faltam <b>67</b> dias para janeiro.</span> Quanto antes você começa, mais aulas faz antes da 1ª mensalidade.</p>
+            <a class="botao botao--branco" data-msg="Olá, Evelyn! Vi no site que, matriculando agora, a 1ª mensalidade fica só para janeiro. Quero garantir minha vaga!" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Garantir minha vaga</a>
+          </div>
+          <p class="oferta__escassez">As turmas têm no máximo 6 alunos. Quando o horário enche, a vaga fecha.</p>
+          <p class="oferta__letras">Condição para novas matrículas feitas em 2026, sujeita à disponibilidade de vagas. Mensalidades a partir de R$ 263, com material incluso.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== POR QUE A WIZARD (vídeo da Evelyn) ===== -->
+    <section class="secao porque" id="por-que">
+      <div class="conteudo">
+        <div class="video-vertical">
+          <video src="videos/por-que-wizard.mp4" poster="videos/por-que-wizard.jpg" controls playsinline preload="none" aria-label="Vídeo da Evelyn explicando por que escolher a Wizard"></video>
+        </div>
+        <div>
+          <p class="rotulo">Por que a Wizard</p>
+          <h2>Vontade de aprender você já tem. Falta o caminho certo.</h2>
+          <p class="intro">Ninguém aprende inglês sem constância, sem prática e sem um caminho para seguir. Na Wizard você tem os três: aulas no seu ritmo, conversação em todas as aulas e um método que vai do básico ao avançado.</p>
+          <blockquote>“Se você quer aprender inglês de verdade, sem complicação, me chama que eu te ajudo a encontrar a melhor turma para você ou para o seu filho.”</blockquote>
+          <a class="botao botao--whats" data-msg="Olá, Evelyn! Assisti seu vídeo no site e quero ajuda para encontrar a melhor turma." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Me ajuda a escolher a turma</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== METODOLOGIA ===== -->
+    <section class="secao" id="metodologia">
+      <div class="conteudo">
+        <p class="rotulo">Metodologia</p>
+        <h2>Como a Wizard faz você falar inglês</h2>
+        <p class="intro">Você aprendeu português primeiro ouvindo e falando, e só depois lendo e escrevendo. O método Wizard segue essa mesma ordem natural. Por isso você fala desde a primeira aula, em vez de passar meses decorando regras.</p>
+
+        <div class="comparacao">
+          <div class="comparacao__col comparacao__col--antes">
+            <h3>Do jeito tradicional</h3>
+            <ul>
+              <li>Muita regra e pouca conversa</li>
+              <li>Sala cheia: você quase não fala</li>
+              <li>Prova para decorar e esquecer</li>
+              <li>Material cobrado à parte</li>
+              <li>Horário rígido, que não cabe na rotina</li>
+            </ul>
+          </div>
+          <div class="comparacao__col comparacao__col--wizard">
+            <h3>Do jeito Wizard</h3>
+            <ul>
+              <li>15 a 20 minutos de conversação em toda aula</li>
+              <li>Até 6 alunos: o professor ouve você</li>
+              <li>Zero provas: avaliação em cada aula</li>
+              <li>Livros, WizPen e fone inclusos na mensalidade</li>
+              <li>Horário livre para adultos no presencial</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="aula">
+          <div class="video-vertical video-youtube">
+            <iframe src="https://www.youtube-nocookie.com/embed/4sqR0G9obdI?rel=0" title="Aula de sábado de manhã na Wizard Telêmaco Borba" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div>
+            <h3>O que acontece em cada aula de 1 hora</h3>
+            <p class="aula__sub">Veja no vídeo uma aula de sábado de manhã aqui na escola.</p>
+            <ul class="aula__passos">
+              <li><span>✓</span><div><b>Conteúdo novo</b><p>Vocabulário e frases novas, com a pronúncia certa do professor e da WizPen.</p></div></li>
+              <li><span>✓</span><div><b>Leitura com o professor</b><p>Você lê e ele acompanha e corrige na hora, como quem toma a lição.</p></div></li>
+              <li><span>✓</span><div><b>Conversação</b><p>15 a 20 minutos falando com o professor sobre o que você acabou de aprender.</p></div></li>
+              <li><span>✓</span><div><b>Avaliação na hora, sem prova</b><p>Fala, audição, leitura e escrita avaliadas aula a aula na sua ficha.</p></div></li>
+              <li><span>✓</span><div><b>Treino em casa</b><p>Livro de tarefas e WizPen para revisar e fixar o que aprendeu.</p></div></li>
+            </ul>
+            <p class="aula__pnl"><b>Por que funciona:</b> o método usa técnicas de PNL (programação neurolinguística), com prática e repetição guiada, para o inglês entrar de forma natural e ficar na memória.</p>
+          </div>
+        </div>
+
+        <h3 class="metodologia__sub">Os 4 pilares do método: F.A.L.E.</h3>
+        <div class="fale">
+          <div class="fale__item"><span class="fale__letra">F</span><h3>Fala</h3><p>15 a 20 minutos de conversação com o professor em todas as aulas, desde a primeira.</p></div>
+          <div class="fale__item"><span class="fale__letra">A</span><h3>Audição</h3><p>Você treina o ouvido com o professor, com a plataforma interativa e com a WizPen.</p></div>
+          <div class="fale__item"><span class="fale__letra">L</span><h3>Leitura</h3><p>O professor acompanha a sua leitura em cada lição, como se tomasse a lição.</p></div>
+          <div class="fale__item"><span class="fale__letra">E</span><h3>Escrita</h3><p>Livro de tarefas para fazer em casa ou na escola, sempre corrigido pelo professor.</p></div>
+        </div>
+
+        <div class="metodo">
+          <div class="metodo__item"><b>2<span>×</span>1</b><h3>Aprendizado em escadinha</h3><p>Vocabulário novo a cada duas lições: você aprende numa e treina na seguinte. O conteúdo vai se somando.</p></div>
+          <div class="metodo__item"><b>0 <span>provas</span></b><h3>Avaliação em toda aula</h3><p>Sem prova: o professor avalia sua fala, audição, leitura e escrita em cada aula, e você acompanha a sua evolução.</p></div>
+          <div class="metodo__item"><b>6<span>.</span></b><h3>Alunos por turma, no máximo</h3><p>Turmas pequenas para o professor dar atenção a cada um. Às vezes a aula fica quase particular.</p></div>
+        </div>
+
+        <a class="botao botao--vermelho metodologia__cta" data-msg="Olá, Evelyn! Vim pelo site e quero agendar uma demonstração online de como é a aula da Wizard." href="#" target="_blank" rel="noopener">Quero ver como é a aula na prática</a>
+      </div>
+    </section>
+
+    <!-- ===== WIZPEN ===== -->
+    <section class="secao wizpen" id="wizpen">
+      <div class="conteudo">
+        <div>
+          <p class="rotulo">Tecnologia exclusiva</p>
+          <h2>WizPen: um professor particular que cabe no bolso</h2>
+          <span class="selo-exclusivo">Patenteada pela Wizard</span>
+          <p class="intro">Encoste a caneta em uma palavra, frase ou imagem do livro e ela lê para você. Nos momentos de conversação, ela fala, faz uma pausa para você responder e fala de novo.</p>
+          <ul class="itens">
+            <li>Funciona como um leitor: cada palavra e imagem do livro tem um código que ela reconhece</li>
+            <li>No começo do livro ela fala mais devagar e, conforme você avança, fala de forma mais natural</li>
+            <li>Funciona em todos os livros, do infantil ao adulto, e vem inclusa no material</li>
+          </ul>
+        </div>
+        <div class="wizpen__fotos">
+          <div class="video-vertical">
+            <video src="videos/wizpen-demonstracao.mp4" poster="videos/wizpen-demonstracao.jpg" controls playsinline preload="none" aria-label="Demonstração da WizPen lendo o livro Kids 2"></video>
+          </div>
+          <img src="img/wizpen-bandeira.jpg" alt="WizPen da Wizard by Pearson" loading="lazy" width="760" height="1350">
+          <img src="img/wizpen-caixa.jpg" alt="WizPen na caixa" loading="lazy" width="760" height="1350">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DEPOIMENTOS ===== -->
+    <section class="secao" id="depoimentos">
+      <div class="conteudo">
+        <p class="rotulo">Quem estuda conta</p>
+        <h2>O que dizem alunos e famílias</h2>
+        <div class="depoimentos-grade">
+          <div class="video-horizontal video-youtube">
+            <iframe src="https://www.youtube-nocookie.com/embed/SplUzJ-1hZU?rel=0" title="Depoimento de alunos da Wizard Telêmaco Borba" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="depoimentos">
+            <figure class="depoimento">
+              <blockquote>Consigo relembrar bastante coisa e complementar. As aulas estão me ajudando bem!</blockquote>
+              <figcaption>Alexandre · aluno adulto</figcaption>
+            </figure>
+            <figure class="depoimento">
+              <blockquote>Ele ficou super animado com as aulas. Gostou muito!</blockquote>
+              <figcaption>Carol · mãe de aluno do Kids</figcaption>
+            </figure>
+          </div>
+        </div>
+        <a class="botao botao--whats depoimentos__cta" data-msg="Olá, Evelyn! Vi os depoimentos no site e quero começar o inglês na Wizard também." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero começar também</a>
       </div>
     </section>
 
@@ -641,68 +897,6 @@
       </div>
     </section>
 
-    <!-- ===== POR QUE A WIZARD (vídeo da Evelyn) ===== -->
-    <section class="secao porque" id="por-que">
-      <div class="conteudo">
-        <div class="video-vertical">
-          <video src="videos/por-que-wizard.mp4" poster="videos/por-que-wizard.jpg" controls playsinline preload="none" aria-label="Vídeo da Evelyn explicando por que escolher a Wizard"></video>
-        </div>
-        <div>
-          <p class="rotulo">Por que a Wizard</p>
-          <h2>Vontade de aprender você já tem. Falta o caminho certo.</h2>
-          <p class="intro">Ninguém aprende inglês sem constância, sem prática e sem um caminho para seguir. Na Wizard você tem os três: aulas no seu ritmo, conversação em todas as aulas e um método que vai do básico ao avançado.</p>
-          <blockquote>“Se você quer aprender inglês de verdade, sem complicação, me chama que eu te ajudo a encontrar a melhor turma para você ou para o seu filho.”</blockquote>
-          <a class="botao botao--whats" data-msg="Olá, Evelyn! Assisti seu vídeo no site e quero ajuda para encontrar a melhor turma." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Me ajuda a escolher a turma</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== METODOLOGIA ===== -->
-    <section class="secao" id="metodologia">
-      <div class="conteudo">
-        <p class="rotulo">Metodologia</p>
-        <h2>Aprenda inglês do jeito que você aprendeu o português</h2>
-        <p class="intro">A Wizard trabalha com uma metodologia associada à PNL: muita prática e repetição guiada, para o inglês entrar de forma natural e ficar na memória.</p>
-
-        <div class="fale">
-          <div class="fale__item"><span class="fale__letra">F</span><h3>Fala</h3><p>15 a 20 minutos de conversação com o professor em todas as aulas, desde a primeira.</p></div>
-          <div class="fale__item"><span class="fale__letra">A</span><h3>Audição</h3><p>Você treina o ouvido com o professor, com a plataforma interativa e com a WizPen.</p></div>
-          <div class="fale__item"><span class="fale__letra">L</span><h3>Leitura</h3><p>O professor acompanha a sua leitura em cada lição, como se tomasse a lição.</p></div>
-          <div class="fale__item"><span class="fale__letra">E</span><h3>Escrita</h3><p>Livro de tarefas para fazer em casa ou na escola, sempre corrigido pelo professor.</p></div>
-        </div>
-
-        <div class="metodo">
-          <div class="metodo__item"><b>2<span>×</span>1</b><h3>Aprendizado em escadinha</h3><p>Vocabulário novo a cada duas lições: você aprende numa e treina na seguinte. O conteúdo vai se somando.</p></div>
-          <div class="metodo__item"><b>0 <span>provas</span></b><h3>Avaliação em toda aula</h3><p>Sem prova: o professor avalia sua fala, audição, leitura e escrita em cada aula, e você acompanha a sua evolução.</p></div>
-          <div class="metodo__item"><b>6<span>.</span></b><h3>Alunos por turma, no máximo</h3><p>Turmas pequenas para o professor dar atenção a cada um. Às vezes a aula fica quase particular.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== WIZPEN ===== -->
-    <section class="secao wizpen" id="wizpen">
-      <div class="conteudo">
-        <div>
-          <p class="rotulo">Tecnologia exclusiva</p>
-          <h2>WizPen: um professor particular que cabe no bolso</h2>
-          <span class="selo-exclusivo">Patenteada pela Wizard</span>
-          <p class="intro">Encoste a caneta em uma palavra, frase ou imagem do livro e ela lê para você. Nos momentos de conversação, ela fala, faz uma pausa para você responder e fala de novo.</p>
-          <ul class="itens">
-            <li>Funciona como um leitor: cada palavra e imagem do livro tem um código que ela reconhece</li>
-            <li>No começo do livro ela fala mais devagar e, conforme você avança, fala de forma mais natural</li>
-            <li>Funciona em todos os livros, do infantil ao adulto, e vem inclusa no material</li>
-          </ul>
-        </div>
-        <div class="wizpen__fotos">
-          <div class="video-vertical">
-            <video src="videos/wizpen-demonstracao.mp4" poster="videos/wizpen-demonstracao.jpg" controls playsinline preload="none" aria-label="Demonstração da WizPen lendo o livro Kids 2"></video>
-          </div>
-          <img src="img/wizpen-bandeira.jpg" alt="WizPen da Wizard by Pearson" loading="lazy" width="760" height="1350">
-          <img src="img/wizpen-caixa.jpg" alt="WizPen na caixa" loading="lazy" width="760" height="1350">
-        </div>
-      </div>
-    </section>
-
     <!-- ===== MATERIAIS ===== -->
     <section class="secao materiais" id="materiais">
       <div class="conteudo">
@@ -867,6 +1061,14 @@
             <a class="botao botao--claro" data-msg="Olá, Evelyn! Quero agendar uma aula experimental ou um teste de nivelamento na escola em Telêmaco Borba." href="#" target="_blank" rel="noopener">Agendar na escola</a>
           </div>
         </div>
+        <div class="passos">
+          <h3>Sua matrícula em 3 passos</h3>
+          <ol>
+            <li><span>1</span><div><b>Me chama no WhatsApp</b><p>Eu entendo o seu objetivo, a sua rotina e quem vai estudar.</p></div></li>
+            <li><span>2</span><div><b>Demonstração ou nivelamento</b><p>Online comigo ou na escola com os teachers, para achar o nível e o horário certos.</p></div></li>
+            <li><span>3</span><div><b>Matrícula e Aula Zero</b><p>Você recebe o material e começa a estudar. <span class="passos__oferta" data-oferta>A 1ª mensalidade fica só para janeiro.</span></p></div></li>
+          </ol>
+        </div>
       </div>
     </section>
 
@@ -885,40 +1087,17 @@
       </div>
     </section>
 
-    <!-- ===== DEPOIMENTOS ===== -->
-    <section class="secao" id="depoimentos" style="padding-top: 0">
-      <div class="conteudo">
-        <p class="rotulo">Quem estuda conta</p>
-        <h2>O que dizem alunos e famílias</h2>
-        <div class="depoimentos-grade">
-          <div class="video-vertical video-youtube">
-            <iframe src="https://www.youtube-nocookie.com/embed/4sqR0G9obdI?rel=0" title="Depoimento em vídeo da Wizard Telêmaco Borba" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-        <div class="depoimentos-lado">
-          <div class="video-horizontal video-youtube">
-            <iframe src="https://www.youtube-nocookie.com/embed/SplUzJ-1hZU?rel=0" title="Depoimento em vídeo de alunos da Wizard Telêmaco Borba" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-        <div class="depoimentos">
-          <figure class="depoimento">
-            <blockquote>Consigo relembrar bastante coisa e complementar. As aulas estão me ajudando bem!</blockquote>
-            <figcaption>Alexandre · aluno adulto</figcaption>
-          </figure>
-          <figure class="depoimento">
-            <blockquote>Ele ficou super animado com as aulas. Gostou muito!</blockquote>
-            <figcaption>Carol · mãe de aluno do Kids</figcaption>
-          </figure>
-        </div>
-        </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ===== DÚVIDAS ===== -->
     <section class="secao" id="duvidas" style="padding-top: 0">
       <div class="conteudo">
         <p class="rotulo">Dúvidas</p>
         <h2>Perguntas frequentes</h2>
         <div class="perguntas">
+          <details data-oferta><summary>Como funciona pagar a 1ª mensalidade só em janeiro?</summary><p>Você faz a matrícula agora, começa as aulas e a 1ª mensalidade fica para janeiro. É a condição para novas matrículas feitas em 2026, enquanto houver vaga no horário que você escolher. Eu te explico todos os detalhes pelo WhatsApp.</p></details>
+          <details><summary>Quanto custa?</summary><p>As mensalidades começam em R$ 263, com material incluso: livros, WizPen e fone de ouvido. O valor depende do curso e da modalidade, e eu te passo certinho pelo WhatsApp.</p></details>
+          <details><summary>A Wizard é uma escola confiável?</summary><p>A Wizard existe desde 1987, é a maior rede de escolas de idiomas do Brasil em número de unidades e faz parte da Pearson, uma das maiores empresas de educação do mundo. Em Telêmaco Borba, a escola fica na Rua Leopoldo J. M. Voigt, 90, no Centro.</p></details>
+          <details><summary>Tenho vergonha de falar inglês. E agora?</summary><p>É mais comum do que parece. Por isso as turmas têm no máximo 6 alunos, e a conversação é sobre o que você acabou de aprender, no seu nível. Você fala com segurança porque sabe o que dizer.</p></details>
+          <details><summary>Já tentei aprender e desisti. Por que agora seria diferente?</summary><p>Quase sempre a gente desiste por falta de constância ou porque não vê evolução. Na Wizard você tem aula marcada, conversação em todas as aulas e avaliação em cada aula, então você enxerga o seu progresso. E, para adultos no presencial, o horário livre ajuda a não perder aula.</p></details>
           <details><summary>Criança de 3 anos aprende inglês mesmo?</summary><p>Aprende, e com facilidade. Na turma Tots, o inglês entra pela brincadeira: músicas, histórias e atividades. A criança ainda não precisa saber ler.</p></details>
           <details><summary>Em quanto tempo eu começo a falar?</summary><p>Desde a primeira aula. Em todas as aulas, mesmo no nível básico, há 15 a 20 minutos de conversação com o professor sobre o que você acabou de estudar.</p></details>
           <details><summary>Como funcionam os horários?</summary><p>Todas as aulas têm 1 hora. Adultos têm horário livre no presencial: agendam quantas aulas quiserem, com 4 horas de antecedência. Adolescentes escolhem entre horário livre ou turma fixa com 2 aulas por semana. Crianças de 3 a 10 anos têm 2 aulas por semana em dias e horários fixos. No online, são sempre 2 aulas por semana em horário fixo.</p></details>
@@ -938,6 +1117,7 @@
         <h2>Pronto para começar o inglês?</h2>
         <span class="hero__slogan">Inglês que te leva mais longe</span>
         <p class="intro" style="margin-top: 18px">Me conta quem vai estudar e eu te ajudo a encontrar a melhor turma, presencial ou online.</p>
+        <p class="chamada__oferta" data-oferta><b>Matriculando agora, a 1ª mensalidade fica só para janeiro.</b> As turmas têm até 6 alunos: garanta a sua vaga antes que o horário encha.</p>
         <div class="hero__acoes">
           <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero começar o inglês na Wizard." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Falar com a Evelyn</a>
           <a class="botao botao--contorno" href="#quiz">Fazer o quiz</a>
@@ -946,6 +1126,14 @@
       </div>
     </section>
   </main>
+
+  <!-- Barra fixa do celular: aparece depois do topo -->
+  <div class="barra-cta" id="barra-cta">
+    <p data-oferta><b>1ª mensalidade só em janeiro</b><small>Turmas com até 6 alunos</small></p>
+    <a class="botao botao--whats" data-oferta data-msg="Olá, Evelyn! Vi no site que, matriculando agora, a 1ª mensalidade fica só para janeiro. Quero garantir minha vaga!" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Garantir vaga</a>
+    <p data-sem-oferta hidden><b>Inglês na Wizard</b><small>Presencial ou online</small></p>
+    <a class="botao botao--whats" data-sem-oferta hidden data-msg="Olá, Evelyn! Vim pelo site da Wizard e quero saber mais sobre o curso de inglês." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Falar com a Evelyn</a>
+  </div>
 
   <footer class="rodape">
     <div class="conteudo">
@@ -962,7 +1150,7 @@
         <p>WhatsApp (42) 99824-2620</p>
         <p><a href="https://www.instagram.com/wizardtb/" target="_blank" rel="noopener">Instagram @wizardtb</a></p>
       </div>
-      <p class="letras">Valores e condições sujeitos a alteração e disponibilidade de turma. Mensalidade a partir de R$ 263, com material incluso.</p>
+      <p class="letras">Valores e condições sujeitos a alteração e disponibilidade de turma. Mensalidade a partir de R$ 263, com material incluso.<span data-oferta> 1ª mensalidade em janeiro para novas matrículas feitas em 2026, sujeita à disponibilidade de vagas.</span></p>
     </div>
   </footer>
 
@@ -971,6 +1159,20 @@
        WHATSAPP DA EVELYN — 55 + DDD + número, só números
        ========================================================= */
     var WHATSAPP = "5542998242620";
+
+    /* =========================================================
+       OFERTA "1ª MENSALIDADE EM JANEIRO" — até esta data (ano-mês-dia).
+       Depois dela, a faixa, a seção e os avisos da oferta somem sozinhos.
+       ========================================================= */
+    var OFERTA_ATE = "2026-12-31";
+    var ofertaAtiva = new Date() <= new Date(OFERTA_ATE + "T23:59:59");
+    document.querySelectorAll("[data-oferta]").forEach(function (el) { el.hidden = !ofertaAtiva; });
+    document.querySelectorAll("[data-sem-oferta]").forEach(function (el) { el.hidden = ofertaAtiva; });
+    if (ofertaAtiva) {
+      var janeiro = new Date(Number(OFERTA_ATE.slice(0, 4)) + 1, 0, 1);
+      var dias = Math.max(1, Math.ceil((janeiro - new Date()) / 864e5));
+      document.getElementById("contador-janeiro").innerHTML = (dias === 1 ? "Falta <b>1</b> dia" : "Faltam <b>" + dias + "</b> dias") + " para janeiro.";
+    }
 
     function linkWhats(msg) {
       return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg);
@@ -1049,7 +1251,7 @@
         if (!fim) { mostrarPasso(atual + 1); return; }
         var r = resultado();
         document.getElementById("quiz-titulo").textContent = r[0];
-        document.getElementById("quiz-texto").textContent = r[1];
+        document.getElementById("quiz-texto").textContent = r[1] + (ofertaAtiva ? " E matriculando agora, a 1ª mensalidade fica só para janeiro." : "");
         document.getElementById("quiz-whats").href = linkWhats(
           "Olá, Evelyn! Fiz o quiz do site. Quem vai estudar: " + respostas.quem.texto +
           ". Moro " + respostas.onde.texto + "." +
@@ -1063,6 +1265,16 @@
       respostas = {};
       mostrarPasso(1);
     });
+
+    // Barra fixa do celular: aparece quando o topo sai da tela
+    var barraCta = document.getElementById("barra-cta");
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (entradas) {
+        barraCta.classList.toggle("visivel", !entradas[0].isIntersecting);
+      }).observe(document.querySelector(".hero"));
+    } else {
+      barraCta.classList.add("visivel");
+    }
 
     // Vídeos em loop só tocam quando aparecem na tela (economiza internet)
     if ("IntersectionObserver" in window) {

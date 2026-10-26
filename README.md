@@ -4,6 +4,9 @@ Site de apresentação do curso de inglês da Wizard by Pearson, unidade Telêma
 No ar em: https://wizardtelemaco.github.io/
 
 ## Links diretos (abrem a turma certa)
+- Oferta 1ª mensalidade em janeiro: https://wizardtelemaco.github.io/#oferta
+- Como é a aula (método): https://wizardtelemaco.github.io/#metodologia
+- Depoimentos: https://wizardtelemaco.github.io/#depoimentos
 - Tots (3 a 5 anos): https://wizardtelemaco.github.io/#tots
 - Little Kids (6 e 7): https://wizardtelemaco.github.io/#little-kids
 - Kids (8 e 9): https://wizardtelemaco.github.io/#kids
@@ -19,6 +22,7 @@ No ar em: https://wizardtelemaco.github.io/
 ## Como alterar
 - Tudo está no `index.html`. Cores e fontes no bloco "IDENTIDADE VISUAL WIZARD".
 - **WhatsApp:** no final do arquivo, `var WHATSAPP = "..."` (55 + DDD + número).
+- **Oferta "1ª mensalidade em janeiro":** no final do arquivo, `var OFERTA_ATE = "2026-12-31"`. Depois dessa data, a faixa, a seção #oferta e os avisos somem sozinhos. Lembre de trocar também o `og:description` (prévia do link no WhatsApp).
 - **Preço "a partir de":** procure por `R$ 263` (topo e rodapé).
 - **Instagram:** procure por `wizardtb`.
 - **Imagens** em `img/` e **vídeos** em `videos/` (comprimidos para celular; cada vídeo tem uma capa `.jpg` com o mesmo nome).
