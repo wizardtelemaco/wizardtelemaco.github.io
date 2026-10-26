@@ -11,6 +11,7 @@ No ar em: https://wizardtelemaco.github.io/
 - Teens (11 a 14): https://wizardtelemaco.github.io/#teens
 - Adultos (15+): https://wizardtelemaco.github.io/#adultos
 - Como funcionam os horários: https://wizardtelemaco.github.io/#horarios
+- Turmas infantis com vaga: https://wizardtelemaco.github.io/#vagas-kids (atualizar no bloco "TURMAS INFANTIS COM VAGA"; nunca colocar nomes de alunos)
 - Quiz presencial ou online: https://wizardtelemaco.github.io/#quiz
 - Trabalha de turno: https://wizardtelemaco.github.io/#turno
 - Demonstração: https://wizardtelemaco.github.io/#demonstracao

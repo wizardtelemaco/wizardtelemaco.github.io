@@ -152,6 +152,8 @@
     .tag--sim { background: #E4F6EC; color: #126B37; }
     .tag--nao { background: #F1F2F5; color: var(--suave); text-decoration: line-through; }
     .painel .botao { margin-top: 22px; }
+    .link-vagas { display: inline-block; margin: 22px 0 0 14px; font-family: var(--fonte-titulo); font-weight: 800; font-size: 15px; color: var(--kids-azul); text-decoration: none; }
+    .link-vagas:hover { text-decoration: underline; text-underline-offset: 3px; }
     .painel__lado img, .painel__lado video { border-radius: 20px; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--fundo); }
     .niveis { margin-top: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
     .nivel { padding: 10px; border-radius: 14px; background: var(--fundo); text-align: center; font-family: var(--fonte-titulo); font-weight: 800; color: var(--marinho); font-size: 15px; line-height: 1.25; }
@@ -168,7 +170,27 @@
     .horario p { margin-top: 8px; font-size: 15px; color: var(--suave); }
     .horarios__escola { margin-top: 18px; color: var(--suave); }
     .horarios__escola b { color: var(--marinho); }
-    @media (max-width: 960px) { .horarios__grade { grid-template-columns: 1fr 1fr; } }
+    .vagas { margin-top: 32px; padding: 28px; border-radius: 28px; background: linear-gradient(150deg, #EAF7FE 0%, #FFFFFF 55%, #FFF8E3 100%); border: 1px solid #BFE6F8; scroll-margin-top: 72px; }
+    .vagas h3 { font-family: var(--fonte-kids); font-size: 30px; font-weight: 800; color: var(--kids-azul); }
+    .vagas__aviso { margin-top: 4px; color: var(--suave); font-size: 15px; }
+    .vagas__grade { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr .8fr; gap: 16px; align-items: start; }
+    .vagas__turma { display: grid; gap: 8px; }
+    .vagas__nome { font-family: var(--fonte-kids); font-size: 22px; font-weight: 800; color: var(--marinho); line-height: 1.2; }
+    .vagas__nome small { font-family: var(--fonte-texto); font-size: 14px; font-weight: 700; color: var(--suave); }
+    .vaga { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 16px; background: var(--branco); border: 2px solid #D5EEF9; color: var(--texto); text-decoration: none; transition: border-color .2s ease, transform .15s ease; }
+    .vaga:hover { border-color: var(--kids-azul); transform: translateY(-1px); }
+    .vaga:focus-visible { outline: 3px solid var(--kids-amarelo); outline-offset: 2px; }
+    .vaga__quando { display: grid; line-height: 1.3; }
+    .vaga__quando b { font-family: var(--fonte-titulo); font-size: 15px; color: var(--marinho); }
+    .vaga__quando span { font-size: 15px; font-weight: 700; }
+    .vaga__quando .vaga__extra { font-size: 13px; font-weight: 600; color: var(--suave); }
+    .vaga__selo { flex: none; padding: 5px 10px; border-radius: 999px; background: #E4F6EC; color: #126B37; font-family: var(--fonte-titulo); font-size: 12px; font-weight: 800; }
+    .vaga__selo--ultimas { background: #FFF1C9; color: #8A5A00; }
+    .vagas__turma--espera { padding: 18px; border-radius: 18px; background: var(--branco); border: 2px dashed #D5EEF9; }
+    .vagas__completa { color: var(--suave); }
+    .vagas__turma--espera .botao { min-height: 44px; font-size: 14px; padding: 10px 18px; justify-self: start; }
+    @media (max-width: 960px) { .horarios__grade { grid-template-columns: 1fr 1fr; } .vagas__grade { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .vagas { padding: 20px; } .vagas__grade { grid-template-columns: 1fr; } }
     @media (max-width: 560px) { .horarios__grade { grid-template-columns: 1fr; } }
 
     /* ---------- Por que a Wizard (vídeo da consultora) ---------- */
@@ -417,6 +439,7 @@
             </ul>
             <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
             <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre a turma Tots (3 a 5 anos)." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber da turma Tots</a>
+            <a class="link-vagas" href="#vagas-kids">Ver horários e lista de espera →</a>
           </div>
           <div class="painel__lado"><video src="videos/kids-01.mp4" poster="videos/kids-01.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Animação: criança aprendendo inglês"></video></div>
         </div>
@@ -433,6 +456,7 @@
             </ul>
             <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
             <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre a turma Little Kids (6 e 7 anos)." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber da turma Little Kids</a>
+            <a class="link-vagas" href="#vagas-kids">Ver horários com vaga →</a>
           </div>
           <div class="painel__lado"><img src="img/material-kids.jpg" alt="Material WizKids: mochila, livro Little Kids e WizPen" loading="lazy" width="900" height="1025"></div>
         </div>
@@ -449,6 +473,7 @@
             </ul>
             <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
             <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre a turma Kids (8 e 9 anos)." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber da turma Kids</a>
+            <a class="link-vagas" href="#vagas-kids">Ver horários com vaga →</a>
           </div>
           <div class="painel__lado"><video src="videos/kids-03.mp4" poster="videos/kids-03.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Animação: ter inglês no vocabulário"></video></div>
         </div>
@@ -465,6 +490,7 @@
             </ul>
             <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
             <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre a turma Next Generation (10 anos)." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber da turma Next Generation</a>
+            <a class="link-vagas" href="#vagas-kids">Ver horários com vaga →</a>
           </div>
           <div class="painel__lado"><video src="videos/kids-05.mp4" poster="videos/kids-05.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Animação: ter mais confiança para falar"></video></div>
         </div>
@@ -538,6 +564,64 @@
           </div>
         </div>
         <p class="horarios__escola"><b>Escola em Telêmaco Borba:</b> segunda a sexta, das 8h às 21h · sábado, das 8h às 12h.</p>
+
+        <!-- =====================================================
+             TURMAS INFANTIS COM VAGA (presencial)
+             Atualizar quando as turmas mudarem. Não colocar nomes de alunos.
+             ===================================================== -->
+        <div class="vagas" id="vagas-kids">
+          <h3>Turmas infantis com vaga</h3>
+          <p class="vagas__aviso">Atualizado em outubro de 2026. As vagas mudam rápido: toque no horário e eu confirmo se ainda está disponível.</p>
+          <div class="vagas__grade">
+            <div class="vagas__turma">
+              <p class="vagas__nome">Little Kids <small>6 e 7 anos</small></p>
+              <a class="vaga" data-vaga="Little Kids 4, terça e quinta, das 16h às 17h" href="#" target="_blank" rel="noopener">
+                <span class="vaga__quando"><b>Terça e quinta</b><span>16h às 17h</span><span class="vaga__extra">Little Kids 4 · 7 anos</span></span>
+                <span class="vaga__selo">Vagas</span>
+              </a>
+              <a class="vaga" data-vaga="Little Kids 2, terça e quinta, das 18h às 19h" href="#" target="_blank" rel="noopener">
+                <span class="vaga__quando"><b>Terça e quinta</b><span>18h às 19h</span><span class="vaga__extra">Little Kids 2 · 6 anos</span></span>
+                <span class="vaga__selo">Vagas</span>
+              </a>
+              <a class="vaga" data-vaga="Little Kids, sábado, das 8h às 10h" href="#" target="_blank" rel="noopener">
+                <span class="vaga__quando"><b>Sábado</b><span>8h às 10h</span><span class="vaga__extra">2 aulas seguidas</span></span>
+                <span class="vaga__selo">Vagas</span>
+              </a>
+            </div>
+            <div class="vagas__turma">
+              <p class="vagas__nome">Kids <small>8 a 10 anos</small></p>
+              <a class="vaga" data-vaga="Kids, segunda e quarta, das 10h às 11h" href="#" target="_blank" rel="noopener">
+                <span class="vaga__quando"><b>Segunda e quarta</b><span>10h às 11h</span></span>
+                <span class="vaga__selo">Vagas</span>
+              </a>
+              <a class="vaga" data-vaga="Kids, terça e quinta, das 10h às 11h" href="#" target="_blank" rel="noopener">
+                <span class="vaga__quando"><b>Terça e quinta</b><span>10h às 11h</span></span>
+                <span class="vaga__selo">Vagas</span>
+              </a>
+              <a class="vaga" data-vaga="Kids, terça e quinta, das 16h às 17h" href="#" target="_blank" rel="noopener">
+                <span class="vaga__quando"><b>Terça e quinta</b><span>16h às 17h</span></span>
+                <span class="vaga__selo vaga__selo--ultimas">Últimas vagas</span>
+              </a>
+              <a class="vaga" data-vaga="Kids, segunda e quarta, das 17h às 18h" href="#" target="_blank" rel="noopener">
+                <span class="vaga__quando"><b>Segunda e quarta</b><span>17h às 18h</span></span>
+                <span class="vaga__selo">Vagas</span>
+              </a>
+              <a class="vaga" data-vaga="Kids, sábado, das 8h às 10h" href="#" target="_blank" rel="noopener">
+                <span class="vaga__quando"><b>Sábado</b><span>8h às 10h</span><span class="vaga__extra">2 aulas seguidas</span></span>
+                <span class="vaga__selo">Vagas</span>
+              </a>
+              <a class="vaga" data-vaga="Kids, sábado, das 10h às 12h" href="#" target="_blank" rel="noopener">
+                <span class="vaga__quando"><b>Sábado</b><span>10h às 12h</span><span class="vaga__extra">2 aulas seguidas</span></span>
+                <span class="vaga__selo vaga__selo--ultimas">Últimas vagas</span>
+              </a>
+            </div>
+            <div class="vagas__turma vagas__turma--espera">
+              <p class="vagas__nome">Tots <small>3 a 5 anos</small></p>
+              <p class="vagas__completa">Turma completa no momento.</p>
+              <a class="botao botao--claro" data-msg="Olá, Evelyn! Vi no site que a turma Tots está completa. Quero entrar na lista de espera." href="#" target="_blank" rel="noopener">Entrar na lista de espera</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -862,6 +946,9 @@
     }
     document.querySelectorAll("[data-msg]").forEach(function (a) {
       a.href = linkWhats(a.dataset.msg);
+    });
+    document.querySelectorAll("[data-vaga]").forEach(function (a) {
+      a.href = linkWhats("Olá, Evelyn! Vi no site que tem vaga na turma " + a.dataset.vaga + ". Pode confirmar se ainda está disponível?");
     });
 
     // Abas das turmas (abre a turma do link, ex.: #teens)
