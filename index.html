@@ -120,6 +120,8 @@
     .hero__preco { margin-top: 14px; display: inline-flex; align-items: baseline; gap: 8px; flex-wrap: wrap; padding: 10px 18px; border-radius: 14px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); }
     .hero__preco small { font-size: 14px; color: rgba(255,255,255,.8); }
     .hero__preco b { font-family: var(--fonte-titulo); font-size: 28px; font-weight: 900; }
+    .hero__preco .hero__pagamento { flex-basis: 100%; margin-top: 2px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,.15); color: var(--branco); font-weight: 700; }
+    .hero__pagamento::before { content: "✓"; margin-right: 6px; color: var(--kids-amarelo); font-weight: 900; }
     .hero__acoes { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 12px; }
 
     .consultora { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18); border-radius: 28px; padding: 24px; text-align: center; backdrop-filter: blur(4px); }
@@ -500,7 +502,7 @@
           <h1>Fale inglês desde a <em>primeira aula.</em></h1>
           <p class="hero__sub">Turmas de até 6 alunos, a partir de 3 anos. Presencial em Telêmaco Borba ou online para todo o Brasil.</p>
           <a class="hero__oferta" href="#oferta" data-oferta><span>Fim de ano</span>Comece agora e pague a 1ª mensalidade só em janeiro</a>
-          <p class="hero__preco"><small>Mensalidades a partir de</small><b>R$ 263</b><small>com material incluso: menos de R$ 9 por dia</small></p>
+          <p class="hero__preco"><small>Mensalidades a partir de</small><b>R$ 263</b><small>com material incluso: menos de R$ 9 por dia</small><small class="hero__pagamento">Boleto ou cartão de crédito, sem juros, no vencimento que você escolher</small></p>
           <div class="hero__acoes">
             <a class="botao botao--vermelho" data-oferta data-msg="Olá, Evelyn! Vi no site que, matriculando agora, a 1ª mensalidade fica só para janeiro. Quero garantir minha vaga!" href="#" target="_blank" rel="noopener">Garantir minha vaga</a>
             <a class="botao botao--contorno" data-msg="Olá, Evelyn! Vim pelo site e quero agendar uma demonstração online de como é a aula da Wizard." href="#" target="_blank" rel="noopener">Ver demonstração online</a>
@@ -542,7 +544,7 @@
           <ol class="oferta__linha">
             <li><span class="oferta__quando">Hoje</span><b>Você garante a sua vaga</b><p>Escolhe o horário e faz a matrícula com desconto.</p></li>
             <li><span class="oferta__quando">Até janeiro</span><b>Já estuda, sem pagar mensalidade</b><p>Aulas com conversação desde o começo.</p></li>
-            <li><span class="oferta__quando">Janeiro</span><b>1ª mensalidade</b><p>E a sua meta de ano novo já está em andamento.</p></li>
+            <li><span class="oferta__quando">Janeiro</span><b>1ª mensalidade</b><p>No boleto ou no cartão, sem juros, no dia de vencimento que você escolher.</p></li>
           </ol>
           <p class="oferta__matricula-titulo">Taxa de matrícula com desconto</p>
           <div class="oferta__matricula">
@@ -1116,6 +1118,7 @@
           <details data-oferta><summary>Como funciona pagar a 1ª mensalidade só em janeiro?</summary><p>Você faz a matrícula agora, começa as aulas e a 1ª mensalidade fica para janeiro. É a condição para novas matrículas feitas em 2026, enquanto houver vaga no horário que você escolher. Eu te explico todos os detalhes pelo WhatsApp.</p></details>
           <details data-oferta><summary>Pago alguma coisa antes de janeiro?</summary><p>Só a taxa de matrícula, que normalmente é R$ 380 e no fim de ano está com desconto: grátis para crianças de 3 a 10 anos e R$ 190 para teens e adultos. A 1ª mensalidade fica para janeiro.</p></details>
           <details><summary>Quanto custa?</summary><p>As mensalidades começam em R$ 263, com material incluso: livros, WizPen e fone de ouvido. O valor depende do curso e da modalidade, e eu te passo certinho pelo WhatsApp.</p></details>
+          <details><summary>Como posso pagar as mensalidades?</summary><p>No boleto ou no cartão de crédito, sempre sem juros. E você escolhe o dia do vencimento que fica melhor para o seu orçamento.</p></details>
           <details><summary>A Wizard é uma escola confiável?</summary><p>A Wizard existe desde 1987, é a maior rede de escolas de idiomas do Brasil em número de unidades e faz parte da Pearson, uma das maiores empresas de educação do mundo. Em Telêmaco Borba, a escola fica na Rua Leopoldo J. M. Voigt, 90, no Centro.</p></details>
           <details><summary>Tenho vergonha de falar inglês. E agora?</summary><p>É mais comum do que parece. Por isso as turmas têm no máximo 6 alunos, e a conversação é sobre o que você acabou de aprender, no seu nível. Você fala com segurança porque sabe o que dizer.</p></details>
           <details><summary>Já tentei aprender e desisti. Por que agora seria diferente?</summary><p>Quase sempre a gente desiste por falta de constância ou porque não vê evolução. Na Wizard você tem aula marcada, conversação em todas as aulas e avaliação em cada aula, então você enxerga o seu progresso. E, para adultos no presencial, o horário livre ajuda a não perder aula.</p></details>
