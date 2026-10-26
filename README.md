@@ -18,5 +18,6 @@ No ar em: https://wizardtelemaco.github.io/
 - Tudo está no `index.html`. Cores e fontes no bloco "IDENTIDADE VISUAL WIZARD".
 - **WhatsApp:** no final do arquivo, `var WHATSAPP = "..."` (55 + DDD + número).
 - **Preço "a partir de":** procure por `R$ 263` (topo e rodapé).
+- **Instagram:** procure por `wizardtb`.
 - **Imagens** em `img/` e **vídeos** em `videos/` (comprimidos para celular; cada vídeo tem uma capa `.jpg` com o mesmo nome).
 - `img/capa.jpg` é a imagem que aparece quando o link é enviado no WhatsApp.
