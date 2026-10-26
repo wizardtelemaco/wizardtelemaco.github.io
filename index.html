@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://wizardtelemaco.github.io/">
   <meta property="og:title" content="Wizard Telêmaco Borba | Inglês que te leva mais longe">
-  <meta property="og:description" content="Comece o inglês agora e pague a 1ª mensalidade só em janeiro. Turmas de até 6 alunos, a partir de 3 anos. Presencial em Telêmaco Borba ou online.">
+  <meta property="og:description" content="Comece o inglês agora: 1ª mensalidade só em janeiro e matrícula com até 100% de desconto. Turmas de até 6 alunos, a partir de 3 anos. Presencial em Telêmaco Borba ou online.">
   <meta property="og:image" content="https://wizardtelemaco.github.io/img/capa.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -158,6 +158,14 @@
     .oferta__linha b { display: block; margin-top: 10px; font-family: var(--fonte-titulo); font-size: 19px; font-weight: 800; line-height: 1.25; }
     .oferta__linha li:last-child b { color: var(--marinho); }
     .oferta__linha p { margin-top: 4px; font-size: 15px; opacity: .9; }
+    .oferta__matricula-titulo { margin-top: 22px; font-family: var(--fonte-titulo); font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--kids-amarelo); }
+    .oferta__matricula { margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .matricula { padding: 16px 20px; border-radius: 20px; background: rgba(0,18,46,.35); border: 1px solid rgba(255,255,255,.18); }
+    .matricula__quem { display: block; font-family: var(--fonte-titulo); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.8); }
+    .matricula__nota { display: block; margin-top: 2px; font-family: var(--fonte-titulo); font-size: 17px; font-weight: 800; }
+    .matricula__preco { margin-top: 8px; display: flex; align-items: baseline; gap: 8px; white-space: nowrap; font-size: 15px; }
+    .matricula__preco s { opacity: .8; }
+    .matricula__preco b { font-family: var(--fonte-titulo); font-size: 34px; font-weight: 900; font-style: italic; color: var(--kids-amarelo); line-height: 1; }
     .oferta__rodape { margin-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap; }
     .oferta__contador { flex: 1 1 340px; font-size: 17px; }
     .oferta__dias { display: block; margin-bottom: 2px; font-family: var(--fonte-titulo); font-size: 20px; font-weight: 800; }
@@ -191,6 +199,7 @@
     .modalidades { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
     .tag { padding: 6px 12px; border-radius: 999px; font-family: var(--fonte-titulo); font-size: 13px; font-weight: 800; background: var(--fundo); color: var(--marinho); }
     .tag--sim { background: #E4F6EC; color: #126B37; }
+    .tag--oferta { background: #FFF1C9; color: #8A5A00; }
     .tag--nao { background: #F1F2F5; color: var(--suave); text-decoration: line-through; }
     .painel .botao { margin-top: 22px; }
     .link-vagas { display: inline-block; margin: 22px 0 0 14px; font-family: var(--fonte-titulo); font-weight: 800; font-size: 15px; color: var(--kids-azul); text-decoration: none; }
@@ -428,7 +437,7 @@
       .confianca__lista li:nth-child(3) { border-left: 0; }
       .oferta__card { padding: 26px 20px; }
       .oferta__card::after { font-size: 120px; top: -20px; }
-      .oferta__linha { grid-template-columns: 1fr; }
+      .oferta__linha, .oferta__matricula { grid-template-columns: 1fr; }
       .barra-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: var(--marinho-escuro); color: var(--branco); box-shadow: 0 -8px 24px rgba(0,0,0,.25); transform: translateY(110%); transition: transform .25s ease; }
       .barra-cta.visivel { transform: none; }
       .barra-cta p { line-height: 1.25; }
@@ -464,7 +473,7 @@
   </svg>
 
   <!-- ===== FAIXA DA OFERTA (some sozinha depois de OFERTA_ATE, no fim do arquivo) ===== -->
-  <a class="faixa-oferta" href="#oferta" data-oferta><b>Matrícula de fim de ano:</b> comece agora e pague a 1ª mensalidade só em janeiro <span>Saiba mais →</span></a>
+  <a class="faixa-oferta" href="#oferta" data-oferta><b>Fim de ano:</b> 1ª mensalidade só em janeiro + matrícula com até 100% de desconto <span>Saiba mais →</span></a>
 
   <!-- ===== BARRA DO TOPO ===== -->
   <header class="barra">
@@ -531,16 +540,27 @@
           <p class="intro">Todo fim de ano a promessa é a mesma: “ano que vem eu aprendo inglês”. Aqui você não precisa esperar. Matricule-se agora, comece as aulas e pague a 1ª mensalidade só em janeiro.</p>
           <p class="oferta__frase">Enquanto muita gente ainda vai começar, você chega em 2027 falando.</p>
           <ol class="oferta__linha">
-            <li><span class="oferta__quando">Hoje</span><b>Você garante a sua vaga</b><p>Escolhe o horário e faz a matrícula.</p></li>
+            <li><span class="oferta__quando">Hoje</span><b>Você garante a sua vaga</b><p>Escolhe o horário e faz a matrícula com desconto.</p></li>
             <li><span class="oferta__quando">Até janeiro</span><b>Já estuda, sem pagar mensalidade</b><p>Aulas com conversação desde o começo.</p></li>
             <li><span class="oferta__quando">Janeiro</span><b>1ª mensalidade</b><p>E a sua meta de ano novo já está em andamento.</p></li>
           </ol>
+          <p class="oferta__matricula-titulo">Taxa de matrícula com desconto</p>
+          <div class="oferta__matricula">
+            <div class="matricula">
+              <div><span class="matricula__quem">Crianças · 3 a 10 anos</span><span class="matricula__nota">Matrícula grátis</span></div>
+              <p class="matricula__preco"><span>de <s>R$ 380</s> por</span><b>R$ 0</b></p>
+            </div>
+            <div class="matricula">
+              <div><span class="matricula__quem">Teens e adultos · a partir de 11 anos</span><span class="matricula__nota">50% de desconto</span></div>
+              <p class="matricula__preco"><span>de <s>R$ 380</s> por</span><b>R$ 190</b></p>
+            </div>
+          </div>
           <div class="oferta__rodape">
             <p class="oferta__contador"><span class="oferta__dias" id="contador-janeiro">Faltam <b>67</b> dias para janeiro.</span> Quanto antes você começa, mais aulas faz antes da 1ª mensalidade.</p>
             <a class="botao botao--branco" data-msg="Olá, Evelyn! Vi no site que, matriculando agora, a 1ª mensalidade fica só para janeiro. Quero garantir minha vaga!" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Garantir minha vaga</a>
           </div>
           <p class="oferta__escassez">As turmas têm no máximo 6 alunos. Quando o horário enche, a vaga fecha.</p>
-          <p class="oferta__letras">Condição para novas matrículas feitas em 2026, sujeita à disponibilidade de vagas. Mensalidades a partir de R$ 263, com material incluso.</p>
+          <p class="oferta__letras">Condição para novas matrículas feitas em 2026, sujeita à disponibilidade de vagas. Taxa de matrícula de R$ 380 por R$ 0 (3 a 10 anos) ou R$ 190 (a partir de 11 anos). Mensalidades a partir de R$ 263, com material incluso.</p>
         </div>
       </div>
     </section>
@@ -705,7 +725,7 @@
               <li>2 aulas de 1 hora por semana, em dias e horários fixos</li>
               <li>Portão eletrônico e tudo fechado durante a aula</li>
             </ul>
-            <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
+            <div class="modalidades"><span class="tag tag--oferta" data-oferta>Matrícula grátis no fim de ano</span><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
             <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre a turma Tots (3 a 5 anos)." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber da turma Tots</a>
             <a class="link-vagas" href="#vagas-kids">Ver horários e lista de espera →</a>
           </div>
@@ -722,7 +742,7 @@
               <li>Material WizKids com mochila e WizPen</li>
               <li>Turmas de até 6 alunos e professores focados na confiança da criança</li>
             </ul>
-            <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
+            <div class="modalidades"><span class="tag tag--oferta" data-oferta>Matrícula grátis no fim de ano</span><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
             <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre a turma Little Kids (6 e 7 anos)." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber da turma Little Kids</a>
             <a class="link-vagas" href="#vagas-kids">Ver horários com vaga →</a>
           </div>
@@ -739,7 +759,7 @@
               <li>Material WizKids com mochila e WizPen</li>
               <li>Para começar, a criança precisa estar totalmente alfabetizada</li>
             </ul>
-            <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
+            <div class="modalidades"><span class="tag tag--oferta" data-oferta>Matrícula grátis no fim de ano</span><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
             <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre a turma Kids (8 e 9 anos)." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber da turma Kids</a>
             <a class="link-vagas" href="#vagas-kids">Ver horários com vaga →</a>
           </div>
@@ -756,7 +776,7 @@
               <li>Conversação em todas as aulas e material com WizPen incluso</li>
               <li>Para começar, a criança precisa estar totalmente alfabetizada</li>
             </ul>
-            <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
+            <div class="modalidades"><span class="tag tag--oferta" data-oferta>Matrícula grátis no fim de ano</span><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
             <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre a turma Next Generation (10 anos)." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber da turma Next Generation</a>
             <a class="link-vagas" href="#vagas-kids">Ver horários com vaga →</a>
           </div>
@@ -774,7 +794,7 @@
               <li>Níveis Teens 2, 4, 6 e 8, com material e WizPen inclusos</li>
               <li>Já estudou inglês? Um teste de nivelamento encontra o nível certo</li>
             </ul>
-            <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--sim">Online para todo o Brasil</span></div>
+            <div class="modalidades"><span class="tag tag--oferta" data-oferta>Matrícula 50% off no fim de ano</span><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--sim">Online para todo o Brasil</span></div>
             <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre a turma Teens (11 a 14 anos)." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber da turma Teens</a>
           </div>
           <div class="painel__lado"><img src="img/material-adulto.jpg" alt="Material Wizard com livros, pasta e WizPen" loading="lazy" width="900" height="1265"></div>
@@ -795,7 +815,7 @@
               <li>Online: 2 aulas por semana em horário fixo, ao vivo com o professor</li>
               <li>Material completo com WizPen e fone de ouvido</li>
             </ul>
-            <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--sim">Online para todo o Brasil</span></div>
+            <div class="modalidades"><span class="tag tag--oferta" data-oferta>Matrícula 50% off no fim de ano</span><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--sim">Online para todo o Brasil</span></div>
             <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre o curso de inglês para adultos." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber do curso para adultos</a>
           </div>
           <div class="painel__lado"><img src="img/material-adulto.jpg" alt="Material Wizard com livros, pasta e WizPen" loading="lazy" width="900" height="1265"></div>
@@ -1094,6 +1114,7 @@
         <h2>Perguntas frequentes</h2>
         <div class="perguntas">
           <details data-oferta><summary>Como funciona pagar a 1ª mensalidade só em janeiro?</summary><p>Você faz a matrícula agora, começa as aulas e a 1ª mensalidade fica para janeiro. É a condição para novas matrículas feitas em 2026, enquanto houver vaga no horário que você escolher. Eu te explico todos os detalhes pelo WhatsApp.</p></details>
+          <details data-oferta><summary>Pago alguma coisa antes de janeiro?</summary><p>Só a taxa de matrícula, que normalmente é R$ 380 e no fim de ano está com desconto: grátis para crianças de 3 a 10 anos e R$ 190 para teens e adultos. A 1ª mensalidade fica para janeiro.</p></details>
           <details><summary>Quanto custa?</summary><p>As mensalidades começam em R$ 263, com material incluso: livros, WizPen e fone de ouvido. O valor depende do curso e da modalidade, e eu te passo certinho pelo WhatsApp.</p></details>
           <details><summary>A Wizard é uma escola confiável?</summary><p>A Wizard existe desde 1987, é a maior rede de escolas de idiomas do Brasil em número de unidades e faz parte da Pearson, uma das maiores empresas de educação do mundo. Em Telêmaco Borba, a escola fica na Rua Leopoldo J. M. Voigt, 90, no Centro.</p></details>
           <details><summary>Tenho vergonha de falar inglês. E agora?</summary><p>É mais comum do que parece. Por isso as turmas têm no máximo 6 alunos, e a conversação é sobre o que você acabou de aprender, no seu nível. Você fala com segurança porque sabe o que dizer.</p></details>
@@ -1117,7 +1138,7 @@
         <h2>Pronto para começar o inglês?</h2>
         <span class="hero__slogan">Inglês que te leva mais longe</span>
         <p class="intro" style="margin-top: 18px">Me conta quem vai estudar e eu te ajudo a encontrar a melhor turma, presencial ou online.</p>
-        <p class="chamada__oferta" data-oferta><b>Matriculando agora, a 1ª mensalidade fica só para janeiro.</b> As turmas têm até 6 alunos: garanta a sua vaga antes que o horário encha.</p>
+        <p class="chamada__oferta" data-oferta><b>Matriculando agora, a 1ª mensalidade fica só para janeiro e a matrícula sai com desconto:</b> grátis para crianças e R$ 190 para teens e adultos. As turmas têm até 6 alunos: garanta a sua vaga antes que o horário encha.</p>
         <div class="hero__acoes">
           <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero começar o inglês na Wizard." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Falar com a Evelyn</a>
           <a class="botao botao--contorno" href="#quiz">Fazer o quiz</a>
@@ -1129,7 +1150,7 @@
 
   <!-- Barra fixa do celular: aparece depois do topo -->
   <div class="barra-cta" id="barra-cta">
-    <p data-oferta><b>1ª mensalidade só em janeiro</b><small>Turmas com até 6 alunos</small></p>
+    <p data-oferta><b>1ª mensalidade só em janeiro</b><small>Matrícula com até 100% off</small></p>
     <a class="botao botao--whats" data-oferta data-msg="Olá, Evelyn! Vi no site que, matriculando agora, a 1ª mensalidade fica só para janeiro. Quero garantir minha vaga!" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Garantir vaga</a>
     <p data-sem-oferta hidden><b>Inglês na Wizard</b><small>Presencial ou online</small></p>
     <a class="botao botao--whats" data-sem-oferta hidden data-msg="Olá, Evelyn! Vim pelo site da Wizard e quero saber mais sobre o curso de inglês." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Falar com a Evelyn</a>
@@ -1150,7 +1171,7 @@
         <p>WhatsApp (42) 99824-2620</p>
         <p><a href="https://www.instagram.com/wizardtb/" target="_blank" rel="noopener">Instagram @wizardtb</a></p>
       </div>
-      <p class="letras">Valores e condições sujeitos a alteração e disponibilidade de turma. Mensalidade a partir de R$ 263, com material incluso.<span data-oferta> 1ª mensalidade em janeiro para novas matrículas feitas em 2026, sujeita à disponibilidade de vagas.</span></p>
+      <p class="letras">Valores e condições sujeitos a alteração e disponibilidade de turma. Mensalidade a partir de R$ 263, com material incluso.<span data-oferta> 1ª mensalidade em janeiro para novas matrículas feitas em 2026, sujeita à disponibilidade de vagas. Taxa de matrícula de R$ 380 por R$ 0 (3 a 10 anos) ou R$ 190 (a partir de 11 anos).</span></p>
     </div>
   </footer>
 
@@ -1251,7 +1272,10 @@
         if (!fim) { mostrarPasso(atual + 1); return; }
         var r = resultado();
         document.getElementById("quiz-titulo").textContent = r[0];
-        document.getElementById("quiz-texto").textContent = r[1] + (ofertaAtiva ? " E matriculando agora, a 1ª mensalidade fica só para janeiro." : "");
+        var extra = !ofertaAtiva ? "" : respostas.quem.valor === "crianca"
+          ? " E matriculando agora, a matrícula é grátis e a 1ª mensalidade fica só para janeiro."
+          : " E matriculando agora, a matrícula sai por R$ 190 (em vez de R$ 380) e a 1ª mensalidade fica só para janeiro.";
+        document.getElementById("quiz-texto").textContent = r[1] + extra;
         document.getElementById("quiz-whats").href = linkWhats(
           "Olá, Evelyn! Fiz o quiz do site. Quem vai estudar: " + respostas.quem.texto +
           ". Moro " + respostas.onde.texto + "." +
