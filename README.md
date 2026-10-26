@@ -22,4 +22,5 @@ No ar em: https://wizardtelemaco.github.io/
 - **Preço "a partir de":** procure por `R$ 263` (topo e rodapé).
 - **Instagram:** procure por `wizardtb`.
 - **Imagens** em `img/` e **vídeos** em `videos/` (comprimidos para celular; cada vídeo tem uma capa `.jpg` com o mesmo nome).
+- **Vídeos do YouTube** (depoimentos e turno): troque o código depois de `/embed/` no `index.html`. O vídeo precisa estar Público ou Não listado.
 - `img/capa.jpg` é a imagem que aparece quando o link é enviado no WhatsApp.
