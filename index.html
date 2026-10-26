@@ -303,7 +303,9 @@
     .inclusao .conteudo { display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: center; }
 
     /* ---------- Depoimentos ---------- */
-    .depoimentos { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .depoimentos-grade { margin-top: 28px; display: grid; grid-template-columns: 340px 1fr; gap: 24px; align-items: start; }
+    .video-youtube iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .depoimentos { display: grid; grid-template-columns: 1fr; gap: 16px; }
     .depoimento { margin: 0; padding: 26px; border-radius: 26px; background: var(--branco); border: 1px solid var(--linha); }
     .depoimento blockquote { margin: 0; font-family: var(--fonte-titulo); font-size: 20px; font-weight: 700; color: var(--marinho); line-height: 1.4; }
     .depoimento blockquote::before { content: "“"; display: block; font-size: 60px; line-height: .6; color: var(--vermelho); }
@@ -340,7 +342,8 @@
       .fale { grid-template-columns: 1fr 1fr; }
       .metodo, .kids-info, .turno__cards { grid-template-columns: 1fr; }
       .kids-videos { grid-template-columns: repeat(3, 1fr); }
-      .modos, .demo, .depoimentos { grid-template-columns: 1fr; }
+      .modos, .demo, .depoimentos, .depoimentos-grade { grid-template-columns: 1fr; }
+      .video-youtube { max-width: 340px; width: 100%; margin: 0 auto; }
       .porque .video-vertical { max-width: 340px; margin: 0 auto; }
       .inclusao .video-vertical { max-width: 300px; }
       .rodape .conteudo { grid-template-columns: 1fr; }
@@ -877,6 +880,10 @@
       <div class="conteudo">
         <p class="rotulo">Quem estuda conta</p>
         <h2>O que dizem alunos e famílias</h2>
+        <div class="depoimentos-grade">
+          <div class="video-vertical video-youtube">
+            <iframe src="https://www.youtube-nocookie.com/embed/4sqR0G9obdI?rel=0" title="Depoimento em vídeo da Wizard Telêmaco Borba" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
         <div class="depoimentos">
           <figure class="depoimento">
             <blockquote>Consigo relembrar bastante coisa e complementar. As aulas estão me ajudando bem!</blockquote>
@@ -886,6 +893,7 @@
             <blockquote>Ele ficou super animado com as aulas. Gostou muito!</blockquote>
             <figcaption>Carol · mãe de aluno do Kids</figcaption>
           </figure>
+        </div>
         </div>
       </div>
     </section>
