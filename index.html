@@ -188,6 +188,10 @@
     .vaga__selo--ultimas { background: #FFF1C9; color: #8A5A00; }
     .vagas__turma--espera { padding: 18px; border-radius: 18px; background: var(--branco); border: 2px dashed #D5EEF9; }
     .vagas__completa { color: var(--suave); }
+    .vagas__outro { margin-top: 20px; padding: 18px 20px; border-radius: 18px; background: var(--branco); border: 2px solid #D5EEF9; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .vagas__outro p { flex: 1 1 320px; color: var(--texto); }
+    .vagas__outro b { color: var(--marinho); }
+    .vagas__outro .botao { min-height: 46px; font-size: 15px; }
     .vagas__turma--espera .botao { min-height: 44px; font-size: 14px; padding: 10px 18px; justify-self: start; }
     @media (max-width: 960px) { .horarios__grade { grid-template-columns: 1fr 1fr; } .vagas__grade { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 560px) { .vagas { padding: 20px; } .vagas__grade { grid-template-columns: 1fr; } }
@@ -620,6 +624,10 @@
               <p class="vagas__completa">Turma completa no momento.</p>
               <a class="botao botao--claro" data-msg="Olá, Evelyn! Vi no site que a turma Tots está completa. Quero entrar na lista de espera." href="#" target="_blank" rel="noopener">Entrar na lista de espera</a>
             </div>
+          </div>
+          <div class="vagas__outro">
+            <p><b>Não encontrou o horário que procurava?</b> Fala comigo: eu vejo outras opções e te aviso quando abrir vaga no horário que você precisa.</p>
+            <a class="botao botao--whats" data-msg="Olá, Evelyn! Não encontrei no site o horário que eu procurava para a turma infantil. Pode me ajudar a ver outras opções?" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Procurar outro horário</a>
           </div>
         </div>
       </div>
