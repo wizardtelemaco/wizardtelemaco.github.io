@@ -158,6 +158,19 @@
     .nivel small { display: block; font-family: var(--fonte-texto); font-weight: 600; color: var(--suave); font-size: 12px; }
     .nota-nivelamento { margin-top: 16px; font-size: 15px; color: var(--suave); }
 
+    /* ---------- Horários ---------- */
+    .horarios__grade { margin-top: 26px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .horario { padding: 22px; border-radius: 22px; background: var(--branco); border: 1px solid var(--linha); border-top: 5px solid var(--marinho); }
+    .horario--kids { border-top-color: var(--kids-azul); }
+    .horario--online { border-top-color: var(--vermelho); }
+    .horario__quem { font-family: var(--fonte-titulo); font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--suave); }
+    .horario h3 { margin-top: 8px; font-size: 19px; color: var(--marinho); }
+    .horario p { margin-top: 8px; font-size: 15px; color: var(--suave); }
+    .horarios__escola { margin-top: 18px; color: var(--suave); }
+    .horarios__escola b { color: var(--marinho); }
+    @media (max-width: 960px) { .horarios__grade { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .horarios__grade { grid-template-columns: 1fr; } }
+
     /* ---------- Por que a Wizard (vídeo da consultora) ---------- */
     .porque { background: var(--marinho); color: var(--branco); }
     .porque .conteudo { display: grid; grid-template-columns: 380px 1fr; gap: 48px; align-items: center; }
@@ -399,7 +412,8 @@
             <ul class="itens">
               <li>Músicas, jogos e atividades em cada aula</li>
               <li>Turmas pequenas, com até 6 crianças</li>
-              <li>Dias e horários fixos, com portão eletrônico e tudo fechado durante a aula</li>
+              <li>2 aulas de 1 hora por semana, em dias e horários fixos</li>
+              <li>Portão eletrônico e tudo fechado durante a aula</li>
             </ul>
             <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
             <a class="botao botao--whats" data-msg="Olá, Evelyn! Vim pelo site e quero saber sobre a turma Tots (3 a 5 anos)." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Quero saber da turma Tots</a>
@@ -445,8 +459,8 @@
             <p class="painel__idade">10 anos · 5º ano</p>
             <p class="painel__texto">A ponte entre o inglês infantil e o dos adolescentes, para chegar no Teens com base forte e confiança para falar.</p>
             <ul class="itens">
-              <li>Conversação em todas as aulas</li>
-              <li>Material com WizPen incluso</li>
+              <li>2 aulas de 1 hora por semana, em dias e horários fixos</li>
+              <li>Conversação em todas as aulas e material com WizPen incluso</li>
               <li>Para começar, a criança precisa estar totalmente alfabetizada</li>
             </ul>
             <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--nao">Online</span></div>
@@ -461,8 +475,9 @@
             <p class="painel__idade">11 a 14 anos · 6º ao 9º ano</p>
             <p class="painel__texto">Inglês para a escola, para os games, para as séries e para o futuro. Com conversação em todas as aulas, o adolescente perde a vergonha de falar.</p>
             <ul class="itens">
-              <li>Níveis Teens 2, 4, 6 e 8</li>
-              <li>Material com WizPen incluso</li>
+              <li>Presencial: agenda livre, como os adultos, ou turma fixa com 2 aulas por semana</li>
+              <li>Online: 2 aulas por semana em horário fixo, ao vivo com o professor</li>
+              <li>Níveis Teens 2, 4, 6 e 8, com material e WizPen inclusos</li>
               <li>Já estudou inglês? Um teste de nivelamento encontra o nível certo</li>
             </ul>
             <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--sim">Online para todo o Brasil</span></div>
@@ -482,8 +497,8 @@
               <div class="nivel">W10 e W12<small>Avançado</small></div>
             </div>
             <ul class="itens">
-              <li>No presencial, você agenda as aulas quando quiser, com 4 horas de antecedência</li>
-              <li>Recomendamos 2 aulas por semana, mas você pode fazer quantas quiser</li>
+              <li>Presencial com horário livre: agende quantas aulas quiser, até mais de uma no mesmo dia, avisando com 4 horas de antecedência</li>
+              <li>Online: 2 aulas por semana em horário fixo, ao vivo com o professor</li>
               <li>Material completo com WizPen e fone de ouvido</li>
             </ul>
             <div class="modalidades"><span class="tag tag--sim">Presencial em Telêmaco Borba</span><span class="tag tag--sim">Online para todo o Brasil</span></div>
@@ -491,6 +506,38 @@
           </div>
           <div class="painel__lado"><img src="img/material-adulto.jpg" alt="Material Wizard com livros, pasta e WizPen" loading="lazy" width="900" height="1265"></div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== COMO FUNCIONAM OS HORÁRIOS ===== -->
+    <section class="secao horarios" id="horarios" style="padding-top: 0">
+      <div class="conteudo">
+        <p class="rotulo">Horários</p>
+        <h2>Como funcionam os horários</h2>
+        <p class="intro">Todas as aulas têm 1 hora. O que muda é como você organiza a semana.</p>
+        <div class="horarios__grade">
+          <div class="horario">
+            <span class="horario__quem">Adultos · 15+</span>
+            <h3>Você monta a sua agenda</h3>
+            <p>No presencial, o horário é livre: agende quantas aulas quiser, até mais de uma no mesmo dia, avisando com 4 horas de antecedência. Para começar, recomendamos 2 aulas por semana.</p>
+          </div>
+          <div class="horario">
+            <span class="horario__quem">Teens · 11 a 14 anos</span>
+            <h3>Agenda livre ou turma fixa</h3>
+            <p>No presencial, o adolescente escolhe: horário livre, como os adultos, ou uma turma com 2 aulas por semana, em dias e horários fixos.</p>
+          </div>
+          <div class="horario horario--kids">
+            <span class="horario__quem">Crianças · 3 a 10 anos</span>
+            <h3>2 aulas por semana, sempre no mesmo horário</h3>
+            <p>Tots, Little Kids, Kids e Next Generation têm dias e horários fixos. A criança cria rotina e estuda com a mesma turma.</p>
+          </div>
+          <div class="horario horario--online">
+            <span class="horario__quem">Online · a partir de 11 anos</span>
+            <h3>2 aulas por semana em horário fixo</h3>
+            <p>Aulas em tempo real com o professor, numa plataforma própria da Wizard. Se precisar faltar, você agenda a reposição.</p>
+          </div>
+        </div>
+        <p class="horarios__escola"><b>Escola em Telêmaco Borba:</b> segunda a sexta, das 8h às 21h · sábado, das 8h às 12h.</p>
       </div>
     </section>
 
@@ -619,17 +666,18 @@
             <ul class="itens">
               <li>Rua Leopoldo J. M. Voigt, 90, Centro</li>
               <li>Segunda a sexta, das 8h às 21h. Sábado, das 8h às 12h</li>
-              <li>Adultos agendam as aulas com 4 horas de antecedência</li>
-              <li>Crianças estudam em dias e horários fixos</li>
+              <li>Adultos: horário livre, agendando com 4 horas de antecedência</li>
+              <li>Teens: horário livre ou turma fixa com 2 aulas por semana</li>
+              <li>Crianças: 2 aulas por semana em dias e horários fixos</li>
             </ul>
           </div>
           <div class="modo modo--online">
             <h3>Online · Wizard On</h3>
             <p class="modo__para">Todo o Brasil · a partir de 11 anos</p>
             <ul class="itens">
-              <li>Aulas ao vivo com o teacher e tempo de conversação</li>
+              <li>Aulas em tempo real com o professor, numa plataforma própria</li>
+              <li>2 aulas por semana em horário fixo, com reposição se precisar faltar</li>
               <li>Material completo com WizPen entregue em casa</li>
-              <li>Horário fixo, com reposição se precisar faltar</li>
               <li>Suporte da escola de Telêmaco Borba</li>
             </ul>
           </div>
@@ -689,7 +737,7 @@
         <div class="turno__cards">
           <div><b>Agende quando puder</b><p>No presencial, marque a aula com 4 horas de antecedência, de segunda a sábado.</p></div>
           <div><b>Estude nas folgas</b><p>Faça mais aulas na semana de folga e menos na semana puxada. Você controla o ritmo.</p></div>
-          <div><b>Ou estude de casa</b><p>No Wizard On, as aulas são ao vivo e você pode repor a aula que perder.</p></div>
+          <div><b>Prefere online?</b><p>No Wizard On, são 2 aulas por semana em horário fixo, e você agenda a reposição quando a escala não deixar.</p></div>
         </div>
         <a class="botao botao--vermelho" data-msg="Olá, Evelyn! Trabalho de turno e quero saber como encaixar o inglês na minha escala." href="#" target="_blank" rel="noopener">Quero estudar no meu horário</a>
       </div>
@@ -758,12 +806,13 @@
         <div class="perguntas">
           <details><summary>Criança de 3 anos aprende inglês mesmo?</summary><p>Aprende, e com facilidade. Na turma Tots, o inglês entra pela brincadeira: músicas, histórias e atividades. A criança ainda não precisa saber ler.</p></details>
           <details><summary>Em quanto tempo eu começo a falar?</summary><p>Desde a primeira aula. Em todas as aulas, mesmo no nível básico, há 15 a 20 minutos de conversação com o professor sobre o que você acabou de estudar.</p></details>
+          <details><summary>Como funcionam os horários?</summary><p>Todas as aulas têm 1 hora. Adultos têm horário livre no presencial: agendam quantas aulas quiserem, com 4 horas de antecedência. Adolescentes escolhem entre horário livre ou turma fixa com 2 aulas por semana. Crianças de 3 a 10 anos têm 2 aulas por semana em dias e horários fixos. No online, são sempre 2 aulas por semana em horário fixo.</p></details>
           <details><summary>Já estudei inglês. Preciso começar do zero?</summary><p>Não. Fazemos um teste de nivelamento rápido para pedir o livro do seu nível certinho.</p></details>
           <details><summary>Tem prova?</summary><p>Não. Você é avaliado em todas as aulas, nos quatro pilares: fala, audição, leitura e escrita. Assim você e o professor acompanham a sua evolução de perto.</p></details>
           <details><summary>Quanto tempo dura o curso?</summary><p>O contrato é de 12 meses, tempo para concluir um módulo inteiro. Depois você pode se rematricular e seguir para o próximo nível.</p></details>
           <details><summary>O material está incluso?</summary><p>Sim. Em muitas escolas o material é cobrado à parte, mas na Wizard a mensalidade já inclui os livros, a WizPen e o fone de ouvido. Muitas vezes tem pronta entrega; quando precisa ser pedido, chega em cerca de 15 a 20 dias.</p></details>
           <details><summary>Criança pode fazer o curso online?</summary><p>O Wizard On é a partir de 11 anos (Teens). Até 10 anos, as aulas são presenciais, na escola em Telêmaco Borba.</p></details>
-          <details><summary>E se eu precisar faltar?</summary><p>No presencial para adultos, você agenda a aula no horário que quiser, então é só remarcar. No online, você pode repor a aula: basta mandar uma mensagem para agendar.</p></details>
+          <details><summary>E se eu precisar faltar?</summary><p>Com horário livre no presencial, é só agendar a aula em outro horário. No online, você agenda a reposição com a escola.</p></details>
         </div>
       </div>
     </section>
@@ -858,13 +907,20 @@
       if (quem === "crianca") {
         return ["Presencial, com turma fixa", "Para crianças, o presencial é o ideal: 2 aulas por semana em horário fixo, turmas de até 6 alunos, músicas, jogos e portão eletrônico."];
       }
+      var online = "Aulas em tempo real com o professor, numa plataforma própria da Wizard: 2 aulas por semana em horário fixo, com reposição se precisar faltar, e o material com WizPen entregue em casa.";
+      if (onde === "fora" && rotina === "turno") {
+        return ["Online: Wizard On", online + " Quando a escala não deixar, é só agendar a reposição."];
+      }
       if (onde === "fora" || rotina === "casa") {
-        return ["Online: Wizard On", "Aulas ao vivo com o teacher, a mesma metodologia do presencial e o material com WizPen entregue na sua casa."];
+        return ["Online: Wizard On", online];
       }
       if (rotina === "turno") {
-        return ["Presencial com horários livres", "Você agenda cada aula com 4 horas de antecedência, de segunda a sábado, e encaixa o inglês na sua escala. Se preferir, o online também funciona."];
+        return ["Presencial com horário livre", "Você agenda cada aula com 4 horas de antecedência, de segunda a sábado, e encaixa o inglês na sua escala. Pode fazer mais aulas nas folgas e menos nas semanas puxadas."];
       }
-      return ["Presencial ou online: os dois combinam com você", "Com rotina fixa, você pode estudar na escola em Telêmaco Borba ou ao vivo pelo Wizard On. Eu te ajudo a escolher a melhor turma."];
+      if (quem === "teen") {
+        return ["Presencial ou online: os dois combinam com você", "No presencial, o adolescente pode ter horário livre ou uma turma fixa com 2 aulas por semana. No online, são 2 aulas por semana em horário fixo. Eu te ajudo a escolher."];
+      }
+      return ["Presencial ou online: os dois combinam com você", "No presencial, você agenda as aulas quando quiser. No online, são 2 aulas por semana em horário fixo, ao vivo com o professor. Eu te ajudo a escolher a melhor opção."];
     }
     document.querySelectorAll(".quiz__opcao").forEach(function (b) {
       b.addEventListener("click", function () {
