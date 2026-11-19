@@ -1,6 +1,6 @@
 # Wizard Telêmaco Borba
 
-Site de apresentação do curso de inglês da Wizard by Pearson, unidade Telêmaco Borba, com atendimento da consultora Evelyn Hartmann.
+Site de apresentação do curso de inglês da Wizard by Pearson, unidade Telêmaco Borba, com atendimento pela recepção, (42) 3273-2010.
 No ar em: https://wizardtelemaco.github.io/
 
 ## Links diretos (abrem a turma certa)
@@ -21,7 +21,7 @@ No ar em: https://wizardtelemaco.github.io/
 
 ## Como alterar
 - Tudo está no `index.html`. Cores e fontes no bloco "IDENTIDADE VISUAL WIZARD".
-- **WhatsApp:** no final do arquivo, `var WHATSAPP = "..."` (55 + DDD + número).
+- **Telefone:** no final do arquivo, `var TELEFONE = "+55..."` (todos os botões ligam para a recepção).
 - **Oferta "1ª mensalidade em janeiro":** no final do arquivo, `var OFERTA_ATE = "2026-12-31"`. Depois dessa data, a faixa, a seção #oferta e os avisos somem sozinhos. Lembre de trocar também o `og:description` (prévia do link no WhatsApp).
 - **Preço "a partir de":** procure por `R$ 263` (topo e rodapé).
 - **Instagram:** procure por `wizardtb`.
