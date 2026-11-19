@@ -28,3 +28,8 @@ No ar em: https://wizardtelemaco.github.io/
 - **Imagens** em `img/` e **vídeos** em `videos/` (comprimidos para celular; cada vídeo tem uma capa `.jpg` com o mesmo nome).
 - **Vídeos do YouTube** (depoimentos e turno): troque o código depois de `/embed/` no `index.html`. O vídeo precisa estar Público ou Não listado.
 - `img/capa.jpg` é a imagem que aparece quando o link é enviado no WhatsApp.
+
+## Versão extra da Jamily
+- Página separada, sem alterar o site principal: https://wizardtelemaco.github.io/jamily/ (arquivos em `jamily/`)
+- Usa as mesmas imagens e vídeos da pasta principal; só a foto da consultora e a `capa.jpg` ficam em `jamily/img/`.
+- Botões no WhatsApp da recepção, (42) 3273-2010; o botão abaixo do vídeo da Evelyn fala com ela.
