@@ -568,15 +568,18 @@
       </div>
     </section>
 
-    <!-- ===== POR QUE A WIZARD ===== -->
+    <!-- ===== POR QUE A WIZARD (vídeo da Evelyn) ===== -->
     <section class="secao porque" id="por-que">
       <div class="conteudo">
+        <div class="video-vertical">
+          <video src="videos/por-que-wizard.mp4" poster="videos/por-que-wizard.jpg" controls playsinline preload="none" aria-label="Vídeo da Evelyn explicando por que escolher a Wizard"></video>
+        </div>
         <div>
           <p class="rotulo">Por que a Wizard</p>
           <h2>Vontade de aprender você já tem. Falta o caminho certo.</h2>
           <p class="intro">Ninguém aprende inglês sem constância, sem prática e sem um caminho para seguir. Na Wizard você tem os três: aulas no seu ritmo, conversação em todas as aulas e um método que vai do básico ao avançado.</p>
-          <blockquote>“Se você quer aprender inglês de verdade, sem complicação, chame a gente que nós ajudamos você a encontrar a melhor turma para você ou para o seu filho.”</blockquote>
-          <a class="botao botao--whats" data-msg="Vim pelo site e quero ajuda para encontrar a melhor turma." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Escolher a turma pelo WhatsApp</a>
+          <blockquote>“Se você quer aprender inglês de verdade, sem complicação, me chama que eu te ajudo a encontrar a melhor turma para você ou para o seu filho.”</blockquote>
+          <a class="botao botao--whats" data-evelyn data-msg="Vi seu vídeo no site da Wizard e quero ajuda para encontrar a melhor turma." href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Falar com a Evelyn</a>
         </div>
       </div>
     </section>
@@ -1181,6 +1184,7 @@
        WHATSAPP DA RECEPÇÃO — 55 + DDD + número, só números
        ========================================================= */
     var WHATSAPP = "554232732010";
+    var WHATSAPP_EVELYN = "5542998242620";   // botão abaixo do vídeo da Evelyn
 
     /* =========================================================
        OFERTA "1ª MENSALIDADE EM JANEIRO" — até esta data (ano-mês-dia).
@@ -1201,6 +1205,9 @@
     }
     document.querySelectorAll("[data-msg]").forEach(function (a) {
       a.href = linkWhats(a.dataset.msg);
+    });
+    document.querySelectorAll("[data-evelyn]").forEach(function (a) {
+      a.href = "https://wa.me/" + WHATSAPP_EVELYN + "?text=" + encodeURIComponent("Olá, Evelyn! " + a.dataset.msg);
     });
     document.querySelectorAll("[data-vaga]").forEach(function (a) {
       a.href = linkWhats("Vi no site que tem vaga na turma " + a.dataset.vaga + ". Pode confirmar se ainda está disponível?");
